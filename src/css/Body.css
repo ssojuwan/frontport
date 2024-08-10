@@ -213,24 +213,24 @@ section h2 {
 .header nav ul li a:hover {
   color: black; /* Hover 시 글자색을 검정색으로 설정 */
   font-weight: bold;
-}
-/* Body.css */
+} 
 
 /* About section 스타일 */
 #about-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* 수직 중앙 정렬 */
   padding: 20px;
+  gap: 20px; /* 이미지와 텍스트 사이의 간격 */
+  flex-wrap: wrap; /* 작은 화면에서 레이아웃이 깨지지 않도록 설정 */
 }
 
 /* Profile picture 컨테이너 스타일 */
 .profile-picture {
-  margin-top: 20px;
-  border-radius: 50%;
-  overflow: hidden;
+  flex-shrink: 0; /* 이미지의 크기를 고정 */
   width: 150px; /* 원하는 너비 설정 */
   height: 150px; /* 원하는 높이 설정 */
+  border-radius: 50%; /* 원형으로 만들기 */
+  overflow: hidden;
 }
 
 /* Profile picture 이미지 스타일 */

@@ -98,7 +98,6 @@ const Body = () => {
             </div>
           </div>
         </div>
-        
       </section>
       <section id="projects">
         <h2>Projects</h2>
