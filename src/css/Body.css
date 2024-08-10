@@ -1,0 +1,241 @@
+/* Body.css */
+
+/* 전체 설정 */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.body {
+  padding: 0; /* 전체 패딩 제거 */
+  margin: 0; /* 전체 마진 제거 */
+  height: 100%; /* 전체 높이 설정 */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  min-height: 100vh; /* 화면 전체 높이 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 20px; /* 상하 패딩 */
+}
+
+/* intro 섹션 배경 이미지와 투명도 설정 */
+#intro {
+  position: relative;
+  color: white; /* 글자 색상 흰색으로 설정 */
+  overflow: hidden; /* 자식 요소가 부모 영역을 넘치지 않도록 설정 */
+  background: url("../image/MainBack.jpg") no-repeat center center;
+  background-size: cover; /* 배경 이미지가 섹션 전체를 덮도록 설정 */
+}
+
+#intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 투명도 30%의 검정색 오버레이 */
+  z-index: 1; /* 오버레이가 텍스트 위에 오도록 설정 */
+}
+
+.intro {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 2; /* 텍스트가 오버레이 위에 보이도록 설정 */
+}
+
+.hr {
+  width: 60%;
+  margin: 20px auto;
+  border: 2px solid orange;
+}
+
+.intro1 {
+  font-size: 1.2rem;
+  margin: 20px 0; /* 상하 마진 */
+  position: relative;
+  z-index: 2; /* 텍스트가 오버레이 위에 보이도록 설정 */
+}
+
+.buttonDeo {
+  margin: 20px 0; /* 상하 마진 */
+  position: relative;
+  z-index: 2; /* 버튼이 오버레이 위에 보이도록 설정 */
+}
+
+.buttonDeo button {
+  padding: 1rem 2rem;
+  font-weight: 400;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.buttonDeo button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2열 레이아웃 */
+  grid-auto-rows: min-content; /* 행 높이 자동 조정 */
+  gap: 20px; /* 항목 사이의 간격 */
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+  gap: 10px; /* 항목 사이의 간격 */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.value {
+  font-size: 1.2rem;
+}
+
+section h2 {
+  font-size: 3rem;
+}
+
+/* 상단으로 이동 버튼 스타일 */
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px; /* 화면 하단에서 100px 위치 */
+  right: 20px; /* 화면 우측에서 20px 위치 */
+  background-color: orange; /* 버튼 배경 색상 */
+  color: white; /* 버튼 텍스트 색상 */
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  width: 50px; /* 버튼 너비 */
+  height: 50px; /* 버튼 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; /* 버튼 텍스트 크기 */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+}
+
+.scroll-to-top:hover {
+  background-color: darkorange; /* 버튼 호버 시 색상 */
+}
+
+/* Header.css */
+.header {
+  display: flex;
+  position: fixed;
+  width: 93vw;
+  justify-content: space-between;
+  align-items: center;
+  background: black; /* 기본 배경색을 검정색으로 설정 */
+  color: white;
+  padding: 15px 50px;
+  transition: background 0.3s; /* 배경색 전환 애니메이션 */
+}
+
+.header.transparent {
+  background: transparent; /* 스크롤 시 배경을 투명하게 설정 */
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li:first-child {
+  margin-left: 0;
+}
+
+.header nav ul li a {
+  color: white; /* 링크 글자색을 흰색으로 설정 */
+  text-decoration: none;
+  position: relative; /* 애니메이션을 위한 relative 위치 설정 */
+  overflow: hidden; /* 애니메이션이 요소를 넘치지 않게 함 */
+  display: inline-block; /* 링크의 크기를 조정할 수 있게 설정 */
+  background: transparent; /* 기본 상태에서 배경색을 투명으로 설정 */
+  padding: 10px; /* 패딩을 추가하여 링크를 클릭할 수 있는 영역을 넓힘 */
+  z-index: 1; /* 가상 요소 위에 텍스트를 위치시키기 위한 z-index 설정 */
+  border-bottom: 1px solid white;
+}
+
+.header nav ul li a::before {
+  content: ""; /* 빈 콘텐츠로 배경을 위한 가상 요소 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white; /* Hover 시 배경색을 흰색으로 설정 */
+  transform: scaleY(0); /* 기본 상태에서 가로로 압축 */
+  transform-origin: bottom; /* 애니메이션의 기준점을 하단으로 설정 */
+  transition: transform 1s ease; /* 애니메이션 시간 설정 */
+  z-index: -1; /* 가상 요소가 텍스트 아래에 위치하도록 z-index 설정 */
+}
+
+.header nav ul li a:hover::before {
+  transform: scaleY(1); /* Hover 시 전체 영역을 덮도록 확장 */
+}
+
+.header nav ul li a:hover {
+  color: black; /* Hover 시 글자색을 검정색으로 설정 */
+  font-weight: bold;
+}
+/* Body.css */
+
+/* About section 스타일 */
+#about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Profile picture 컨테이너 스타일 */
+.profile-picture {
+  margin-top: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px; /* 원하는 너비 설정 */
+  height: 150px; /* 원하는 높이 설정 */
+}
+
+/* Profile picture 이미지 스타일 */
+.profile-picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
