@@ -6,6 +6,7 @@ import Profile from "../image/profile.png";
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [headerTransparent, setHeaderTransparent] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleScroll = () => {
     const introSection = document.getElementById("intro");
@@ -19,11 +20,19 @@ const Body = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  /* eslint-disable*/
   return (
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
@@ -36,7 +45,7 @@ const Body = () => {
               <a href="#about-section">About</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#skills">Skiils</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -53,9 +62,7 @@ const Body = () => {
           <hr className="hr" />
         </p>
         <p className="intro1">
-          안녕하세요.
-          <br />
-          저는 꿈을 쫒는 프론트 엔드 개발자, 서주완입니다.
+          안녕하세요. 저는 꿈을 쫒는 프론트 엔드 개발자, 서주완입니다.
         </p>
         <div className="buttonDeo">
           <button>
@@ -90,7 +97,16 @@ const Body = () => {
             <div className="value">wndhks990824@naver.com</div>
           </div>
           <div className="info-item">
-            <div className="label">학력</div>
+            <div className="label">
+              학력{" "}
+              <button
+                className="eduButton"
+                onClick={openModal}
+                style={{ marginLeft: "10px" }}
+              >
+                +
+              </button>
+            </div>
             <div className="value">
               연암공과대학교
               <br />
@@ -98,10 +114,55 @@ const Body = () => {
             </div>
           </div>
         </div>
+        <hr className="aboutHr" />
+        <div className="overViewDiv">
+          <h2>OverView</h2>
+          <div className="overViewContent">
+            <p>Q. 프론트앤드 지원 동기</p>
+            학교에서 처음으로 HTML, CSS, JavaScript를 접하면서, 결과물이
+            즉각적으로 나타나는 프론트엔드 개발에 매력을 느꼈습니다. 이후
+            개인적으로 공부하던 중 React라는 라이브러리를 알게 되었고, 실제
+            프로젝트 경험을 쌓기 위해 'Together'라는 봉사단체와 봉사자를
+            매칭하는 플랫폼에 참여하게 되었습니다. 이 프로젝트에서 저는 게시판
+            CRUD 기능 구현과 컴포넌트 제작을 담당하며, 프론트엔드 개발의 매력과
+            사용자 경험 개선의 중요성을 깊이 이해하게 되었습니다. 이러한 경험을
+            통해 프론트엔드 개발에 대한 열정이 더욱 커졌고, 사용자 중심의
+            혁신적인 웹 애플리케이션을 개발하고 싶습니다.
+          </div>
+          <br />
+          <div className="overViewContent">
+            <p>Q. 본인의 장 · 단점</p>제 장점은 새로운 기술에 대한 호기심이
+            많다는겁니다. 저는 항상 최신 웹 기술과 트렌드에 대해 배우고 탐구하는
+            것을 즐깁니다. 이러한 호기심 덕분에 다양한 프레임워크와 라이브러리를
+            익히며, 문제를 창의적으로 해결하는 능력을 키워왔습니다. 반면, 제
+            단점은 조급함입니다. 프로젝트를 진행할 때 결과를 빠르게 보고
+            싶어하는 경향이 있어, 때때로 충분한 검토 없이 진행하게 되는 경우가
+            있습니다. 이를 개선하기 위해 최근에는 작업의 우선순위를 정하고, 각
+            단계에서 충분한 시간을 할애하도록 노력하고 있습니다. 이러한 자기
+            개선의 과정을 통해 보다 완성도 높은 결과물을 만들어내고자 합니다.
+          </div>
+          <br />
+          <div className="overViewContent">
+            <p>Q. 가치관</p>
+            프론트엔드 개발자로서 제 가치관은 피드백과 개선입니다. 모든
+            프로젝트가 처음부터 완벽할 수는 없다고 생각합니다. 그러나 좋은
+            개발자는 사용자와 팀원으로부터 받은 개선 방안을 적극적으로 수용하여
+            프로젝트를 발전시킬 수 있습니다. 피드백을 통한 반복적인 개선 과정을
+            통해 더욱 사용자 친화적이고, 사용자에게 더 나은 경험을 제공할 수
+            있습니다. 또한, 팀 내에서의 피드백을 통해 동료 개발자, 디자이너,
+            기획자와 원활하게 소통하며 서로의 아이디어를 공유하고, 더 나은
+            솔루션을 도출할 수 있습니다. 마지막으로, 피드백을 통해 자신의
+            개발물에 부족한 부분을 인식하고 지속적으로 성장할 수 있다고
+            믿습니다. 이러한 가치관을 바탕으로, 저는 더욱 발전하는 프론트엔드
+            개발자가 되고자 합니다.
+            <br />
+          </div>
+          <br />
+        </div>
       </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <p>여기에 프로젝트 정보를 추가하세요.</p>
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>여기에 스킬 정보를 추가하세요.</p>
       </section>
       <section id="contact">
         <h2>Contact</h2>
@@ -112,6 +173,47 @@ const Body = () => {
         <button className="scroll-to-top" onClick={scrollToTop}>
           ↑
         </button>
+      )}
+
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
+            <h2>학력 상세</h2>
+            <table className="education-table">
+              <thead>
+                <tr>
+                  <th>기 간</th>
+                  <th>학 교 명</th>
+                  <th>학과 및 전공</th>
+                  <th>졸업 여부</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2015.03~2018.02</td>
+                  <td>대아고등학교</td>
+                  <td>이과</td>
+                  <td>졸업</td>
+                </tr>
+                <tr>
+                  <td>2018.03~2024.02</td>
+                  <td>연암공과대학교</td>
+                  <td>스마트소프트웨어학과</td>
+                  <td>졸업</td>
+                </tr>
+                <tr>
+                  <td>2024.03~</td>
+                  <td>연암공과대학교</td>
+                  <td>스마트소프트웨어학과(심화)</td>
+                  <td>재학중</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       )}
     </main>
   );

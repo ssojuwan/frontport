@@ -23,6 +23,8 @@ section {
   min-height: 100vh; /* 화면 전체 높이 */
   text-align: center; /* 텍스트 중앙 정렬 */
   padding: 20px; /* 상하 패딩 */
+  background-color: rgb(35, 35, 35);
+  color: white;
 }
 
 /* intro 섹션 배경 이미지와 투명도 설정 */
@@ -59,10 +61,34 @@ section {
 }
 
 .intro1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
   margin: 20px 0; /* 상하 마진 */
   position: relative;
   z-index: 2; /* 텍스트가 오버레이 위에 보이도록 설정 */
+  overflow: hidden; /* 타이핑 애니메이션에 따라 내용이 잘리는 것을 방지 */
+  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
+  border-right: 3px solid; /* 커서 애니메이션을 만들기 위한 설정 */
+  animation: typing 5s steps(40), blink-caret 0.75s step-end infinite; /* 타이핑 및 커서 깜빡임 애니메이션 적용 */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  } /* 처음에는 텍스트가 보이지 않음 */
+  to {
+    width: 100%;
+  } /* 텍스트가 완전히 보이도록 애니메이션 */
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  } /* 커서가 깜빡이지 않는 상태 */
+  50% {
+    border-color: white;
+  } /* 커서가 깜빡이는 상태 */
 }
 
 .buttonDeo {
@@ -213,7 +239,7 @@ section h2 {
 .header nav ul li a:hover {
   color: black; /* Hover 시 글자색을 검정색으로 설정 */
   font-weight: bold;
-} 
+}
 
 /* About section 스타일 */
 #about-section {
@@ -228,9 +254,10 @@ section h2 {
 .profile-picture {
   flex-shrink: 0; /* 이미지의 크기를 고정 */
   width: 150px; /* 원하는 너비 설정 */
-  height: 150px; /* 원하는 높이 설정 */
-  border-radius: 50%; /* 원형으로 만들기 */
+  height: 170px; /* 원하는 높이 설정 */
+  border-radius: 30%; /* 원형으로 만들기 */
   overflow: hidden;
+  background-color: white;
 }
 
 /* Profile picture 이미지 스타일 */
@@ -238,4 +265,88 @@ section h2 {
   width: 100%;
   height: auto;
   display: block;
+}
+
+#projects {
+  background-color: cyan;
+}
+
+.aboutHr {
+  width: 100%;
+  border: 1px solid white;
+}
+
+.overViewDiv {
+  text-align: left;
+  width: 100%;
+}
+
+.overViewDiv h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.overViewContent {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  padding-top: 0;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  background-color: rgb(71, 71, 71);
+  line-height: 1.8rem;
+}
+
+.overViewContent p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.eduButton {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border: none;
+  padding-top: -30px;
+}
+
+.modal {
+  display: block; /* 모달을 보이도록 설정 */
+  position: fixed; /* 화면에 고정 */
+  z-index: 1; /* 다른 콘텐츠 위에 위치 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* 스크롤 가능 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* 화면 중앙에 위치 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 550px; /* 최대 너비 설정 */
+  border-radius: 10px;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
