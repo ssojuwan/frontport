@@ -63,33 +63,38 @@ section {
 .intro1 {
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 20px 0; /* 상하 마진 */
+  margin: 20px 0;
   position: relative;
-  z-index: 2; /* 텍스트가 오버레이 위에 보이도록 설정 */
-  overflow: hidden; /* 타이핑 애니메이션에 따라 내용이 잘리는 것을 방지 */
-  white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 설정 */
-  border-right: 3px solid; /* 커서 애니메이션을 만들기 위한 설정 */
-  animation: typing 5s steps(40), blink-caret 0.75s step-end infinite; /* 타이핑 및 커서 깜빡임 애니메이션 적용 */
+  z-index: 2;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: 49ch; /* 텍스트 길이에 맞춘 width 설정 */
+  animation: typing 4s steps(50, end) 1s normal both, 
+             blink-caret 0.75s step-end infinite 6s;
 }
 
 @keyframes typing {
   from {
     width: 0;
-  } /* 처음에는 텍스트가 보이지 않음 */
+  }
   to {
-    width: 100%;
-  } /* 텍스트가 완전히 보이도록 애니메이션 */
+    width: 49ch;
+  }
 }
 
 @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
-  } /* 커서가 깜빡이지 않는 상태 */
+  }
   50% {
     border-color: white;
-  } /* 커서가 깜빡이는 상태 */
+  }
 }
+
+
+
 
 .buttonDeo {
   margin: 20px 0; /* 상하 마진 */
