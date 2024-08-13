@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import "../css/Body.css";
 import "../css/Header.css"; // 헤더 CSS 가져오기
 import Profile from "../image/profile.png";
+import Html from "../image/html.png";
+import Css from "../image/css.png";
+import Js from "../image/js.png";
+import Aws from "../image/aws.png";
+import Android from "../image/android.png";
+import Discord from "../image/discord.jpg";
+import Github from "../image/github.jpg";
+import Mysql from "../image/mysql.png";
+import ImgReact from "../image/react.png";
+import Email from "../image/email.svg";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -20,6 +30,20 @@ const Body = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const sendToEmail = () => {
+    const copyTxt = document.getElementById("copyTxt");
+    if (copyTxt) {
+      copyTxt.select();
+      copyTxt.setSelectionRange(0, 99999); // Mobile 대응
+
+      navigator.clipboard.writeText(copyTxt.value);
+
+      alert("복사되었습니다.");
+    } else {
+      alert("복사할 이메일 주소를 찾을 수 없습니다.");
+    }
+  };
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -32,7 +56,8 @@ const Body = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  /* eslint-disable*/
+
+  /* eslint-disable */
   return (
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
@@ -45,10 +70,10 @@ const Body = () => {
               <a href="#about-section">About</a>
             </li>
             <li>
-              <a href="#skills">Skiils</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#project">Project</a>
             </li>
           </ul>
         </nav>
@@ -70,6 +95,7 @@ const Body = () => {
           </button>
         </div>
       </section>
+
       <section id="about-section">
         <h2 className="bodyH2">About me</h2>
         <div className="profile-picture">
@@ -94,7 +120,16 @@ const Body = () => {
           </div>
           <div className="info-item">
             <div className="label">이메일</div>
-            <div className="value">wndhks990824@naver.com</div>
+            <div className="value">
+              <input
+                type="text"
+                id="copyTxt"
+                value="wndhks990824@naver.com"
+                readOnly
+                style={{ position: "absolute", top: "-9999px" }}
+              />
+              wndhks990824@naver.com
+            </div>
           </div>
           <div className="info-item">
             <div className="label">
@@ -162,17 +197,73 @@ const Body = () => {
       </section>
       <section id="skills">
         <h2>Skills</h2>
-        <p>여기에 스킬 정보를 추가하세요.</p>
+        <div className="divSkills">
+          <div>
+            <p>Frontend</p>
+            <hr />
+            <div>
+              <img src={Html} alt="Html" />
+            </div>
+            <div>
+              <img src={Css} alt="Css" />
+            </div>
+            <div>
+              <img src={Js} alt="Js" />
+            </div>
+            <div>
+              <img src={ImgReact} alt="React" />
+            </div>
+          </div>
+          <div>
+            <p>Backend</p>
+            <hr />
+            <div>
+              <img src={Mysql} alt="Mysql" />
+            </div>
+          </div>
+          <div>
+            <p>Mobile App</p>
+            <hr />
+            <div>
+              <img src={Android} alt="Android" />
+            </div>
+          </div>
+          <div>
+            <p>Deployment</p>
+            <hr />
+            <div>
+              <img src={Aws} alt="Aws" />
+            </div>
+          </div>
+          <div>
+            <p>Version Control</p>
+            <hr />
+            <div>
+              <img src={Github} alt="Github" />
+            </div>
+          </div>
+          <div>
+            <p>Communication</p> <hr />
+            <div>
+              <img src={Discord} alt="Discord" />
+            </div>
+          </div>
+        </div>
       </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>여기에 연락처 정보를 추가하세요.</p>
+      <section id="project">
+        <h2>Project</h2>
+        <p>프로젝트 내용을 넣어볼까요...</p>
       </section>
 
       {showScrollButton && (
-        <button className="scroll-to-top" onClick={scrollToTop}>
-          ↑
-        </button>
+        <>
+          <button className="scroll-to-top" onClick={scrollToTop}>
+            ↑
+          </button>
+          <button className="send-to-email" onClick={sendToEmail}>
+            <img src={Email} alt="Email" width="100%" height="100%" b />
+          </button>
+        </>
       )}
 
       {isModalOpen && (

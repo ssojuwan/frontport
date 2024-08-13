@@ -70,8 +70,8 @@ section {
   white-space: nowrap;
   border-right: 3px solid;
   width: 49ch; /* 텍스트 길이에 맞춘 width 설정 */
-  animation: typing 4s steps(50, end) 1s normal both, 
-             blink-caret 0.75s step-end infinite 6s;
+  animation: typing 4s steps(50, end) 1s normal both,
+    blink-caret 0.75s step-end infinite 6s;
 }
 
 @keyframes typing {
@@ -92,9 +92,6 @@ section {
     border-color: white;
   }
 }
-
-
-
 
 .buttonDeo {
   margin: 20px 0; /* 상하 마진 */
@@ -146,6 +143,7 @@ section h2 {
   font-size: 3rem;
 }
 
+
 /* 상단으로 이동 버튼 스타일 */
 .scroll-to-top {
   position: fixed;
@@ -169,6 +167,30 @@ section h2 {
 .scroll-to-top:hover {
   background-color: darkorange; /* 버튼 호버 시 색상 */
 }
+
+.send-to-email {
+  position: fixed;
+  bottom: 160px; /* 화면 하단에서 160px 위치 (scroll-to-top 버튼과 겹치지 않도록 조정) */
+  right: 20px; /* 화면 우측에서 20px 위치 */
+  background-color: orange; /* 버튼 배경 색상 (파란색) */
+  color: white; /* 버튼 텍스트 색상 */
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  width: 50px; /* 버튼 너비 */
+  height: 50px; /* 버튼 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* 버튼 텍스트 크기 */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼 그림자 추가 */
+  z-index: 1000; /* 다른 요소들 위에 표시 */
+}
+
+.send-to-email:hover {
+  background-color: darkorange; /* 버튼 호버 시 색상 (어두운 파란색) */
+}
+
 
 /* Header.css */
 .header {
@@ -354,4 +376,77 @@ section h2 {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+#skills {
+  display: flex;
+  flex-wrap: wrap; /* 작은 화면에서도 레이아웃이 깨지지 않도록 설정 */
+  align-items: flex-start; /* 상단 정렬 */
+}
+
+.divSkills hr {
+  border: 1px solid white;
+  width: 7vw;
+}
+
+.divSkills {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap; /* 작은 화면에서도 레이아웃이 깨지지 않도록 설정 */
+  justify-content: space-around; /* 항목을 가로로 분산 배치 */
+  align-items: flex-start; /* 상단 정렬 */
+}
+
+.divSkills div {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 아이템들을 가운데 정렬 */
+  background-color: rgb(55, 55, 55);
+  border-radius: 3rem;
+  padding: 10px; /* 패딩 추가로 간격 조정 */
+  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+  position: relative; /* 자식 요소의 위치를 조정하기 위한 설정 */
+  transition: background-color 0.3s, width 0.3s; /* 부드러운 전환 효과 */
+}
+
+/* Hover 상태에서 상위 div만 스타일 적용 */
+.divSkills div:hover {
+  background-color: rgb(66, 66, 66);
+  width: 15%;
+}
+
+/* 내부 요소들에 대한 기본 스타일 유지 */
+.divSkills div .content,
+.divSkills div .bottom {
+  transition: none; /* 전환 효과를 제거합니다 */
+}
+
+/* 내부 요소들의 배경색과 스타일을 유지 */
+.divSkills div .content {
+  flex: 1; /* 빈 공간을 채우기 위해 확장 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 상단 정렬 */
+  align-items: center; /* 중앙 정렬 */
+}
+
+.divSkills div .bottom {
+  position: absolute; /* 하단에 고정하기 위한 설정 */
+  bottom: 10px; /* 하단 여백 설정 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+}
+
+.divSkills p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.divSkills div img {
+  width: 5vw;
+  height: 10vh;
+  object-fit: scale-down;
 }
