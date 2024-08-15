@@ -12,11 +12,14 @@ import Github from "../image/github.jpg";
 import Mysql from "../image/mysql.png";
 import ImgReact from "../image/react.png";
 import Email from "../image/email.svg";
+import Raspberrypi from "../image/raspberrypi.png";
+import Arduino from "../image/arduino.jpg";
+import Coin from "../image/coin.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [headerTransparent, setHeaderTransparent] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
   const handleScroll = () => {
     const introSection = document.getElementById("intro");
@@ -44,12 +47,12 @@ const Body = () => {
     }
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openModal = (content) => {
+    setModalContent(content);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setModalContent(null);
   };
 
   useEffect(() => {
@@ -57,7 +60,6 @@ const Body = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* eslint-disable */
   return (
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
@@ -74,6 +76,9 @@ const Body = () => {
             </li>
             <li>
               <a href="#project">Project</a>
+            </li>
+            <li>
+              <a href="https://github.com/">GitHub</a>
             </li>
           </ul>
         </nav>
@@ -136,7 +141,41 @@ const Body = () => {
               학력{" "}
               <button
                 className="eduButton"
-                onClick={openModal}
+                onClick={() => openModal(
+                  <div>
+                    <h2>학력 상세</h2>
+                    <table className="education-table">
+                      <thead>
+                        <tr>
+                          <th>기 간</th>
+                          <th>학 교 명</th>
+                          <th>학과 및 전공</th>
+                          <th>졸업 여부</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2015.03~2018.02</td>
+                          <td>대아고등학교</td>
+                          <td>이과</td>
+                          <td>졸업</td>
+                        </tr>
+                        <tr>
+                          <td>2018.03~2024.02</td>
+                          <td>연암공과대학교</td>
+                          <td>스마트소프트웨어학과</td>
+                          <td>졸업</td>
+                        </tr>
+                        <tr>
+                          <td>2024.03~</td>
+                          <td>연암공과대학교</td>
+                          <td>스마트소프트웨어학과(심화)</td>
+                          <td>재학중</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                )}
                 style={{ marginLeft: "10px" }}
               >
                 +
@@ -195,6 +234,7 @@ const Body = () => {
           <br />
         </div>
       </section>
+
       <section id="skills">
         <h2>Skills</h2>
         <div className="divSkills">
@@ -248,11 +288,51 @@ const Body = () => {
               <img src={Discord} alt="Discord" />
             </div>
           </div>
+          <div>
+            <p>Hardware</p> <hr />
+            <div>
+              <img src={Arduino} alt="Arduino" />
+              <img src={Raspberrypi} alt="Raspberrypi" />
+            </div>
+          </div>
         </div>
       </section>
+
       <section id="project">
-        <h2>Project</h2>
-        <p>프로젝트 내용을 넣어볼까요...</p>
+        <div className="project-container">
+          <div className="project-item">
+            <img src={Coin} alt="Coin" />
+            <div className="project-overlay">
+              <p className="project-title">아두이노 동전 분류기</p>
+              <p className="project-description">
+                아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+              </p>
+              <button className="project-button" onClick={() => openModal(
+                <div>
+                  <h2>아두이노 동전 분류기</h2>
+                  <p>아두이노를 활용한 동전 분류 및 지문 인식 금고 제작 프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는 아두이노와 다양한 센서를 이용해 동전을 자동으로 분류하고, 지문 인식을 통해 금고를 열 수 있는 시스템을 개발하였습니다.</p>
+                </div>
+              )}>
+                자세히 보기
+              </button>
+            </div>
+          </div>
+          <div className="project-item">
+            <img src={ImgReact} alt="ImgReact" />
+            <div className="project-overlay">
+              <p className="project-title">함께해요 투게더</p>
+              <p className="project-description">리액트 웹 페이지 개발</p>
+              <button className="project-button" onClick={() => openModal(
+                <div>
+                  <h2>함께해요 투게더</h2>
+                  <p>리액트 기반의 웹 페이지 개발 프로젝트로, 봉사단체와 봉사자를 매칭하는 플랫폼입니다. 이 프로젝트에서는 사용자 인터페이스를 구성하고, 게시판 CRUD 기능을 구현하였습니다.</p>
+                </div>
+              )}>
+                자세히 보기
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
 
       {showScrollButton && (
@@ -261,48 +341,18 @@ const Body = () => {
             ↑
           </button>
           <button className="send-to-email" onClick={sendToEmail}>
-            <img src={Email} alt="Email" width="100%" height="100%" b />
+            <img src={Email} alt="Email" width="100%" height="100%" />
           </button>
         </>
       )}
 
-      {isModalOpen && (
+      {modalContent && (
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={closeModal}>
               &times;
             </span>
-            <h2>학력 상세</h2>
-            <table className="education-table">
-              <thead>
-                <tr>
-                  <th>기 간</th>
-                  <th>학 교 명</th>
-                  <th>학과 및 전공</th>
-                  <th>졸업 여부</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>2015.03~2018.02</td>
-                  <td>대아고등학교</td>
-                  <td>이과</td>
-                  <td>졸업</td>
-                </tr>
-                <tr>
-                  <td>2018.03~2024.02</td>
-                  <td>연암공과대학교</td>
-                  <td>스마트소프트웨어학과</td>
-                  <td>졸업</td>
-                </tr>
-                <tr>
-                  <td>2024.03~</td>
-                  <td>연암공과대학교</td>
-                  <td>스마트소프트웨어학과(심화)</td>
-                  <td>재학중</td>
-                </tr>
-              </tbody>
-            </table>
+            {modalContent}
           </div>
         </div>
       )}
