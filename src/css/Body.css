@@ -131,6 +131,8 @@ section {
   border-radius: 8px;
 }
 
+
+
 .label {
   font-weight: bold;
   font-size: 1.5rem;
@@ -346,6 +348,30 @@ section h2 {
   border: none;
   padding-top: -30px;
 }
+
+
+.education-table{
+  align-items: center;
+  justify-content: center;
+  margin-left : 15px;
+}
+.education-table tr th{
+  background-color: rgb(255, 255, 255);
+  border : 1px solid rgb(f,f,f);
+  font-weight: bold;
+  color : rgb(0, 0, 0);
+  height : 2rem;
+
+}
+.education-table tr td{
+  padding-left: 15px;
+  padding-right: 15px;
+  border : 1px solid rgb(44,44,44);
+  background-color: rgb(44, 44, 44);
+  height : 2rem;
+  color : white;
+}
+
 /* Body.css */
 
 /* 모달의 공통 스타일 */
@@ -362,21 +388,20 @@ section h2 {
   background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
 }
 
-/* 일반 모달 콘텐츠 스타일 */
 .modal-content {
-  background-color: #fff;
-  margin: 5% auto; /* 화면 중앙에 위치 */
+  background-color: rgb(55,55,55);
+  color : white;
+  margin: 10% auto; /* 화면 중앙에 위치 */
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 600px; /* 최대 너비 설정 */
+  max-width: 700px; /* 최대 너비 설정 */
   max-height: 80vh; /* 최대 높이 설정 */
   border-radius: 10px;
   text-align: center;
   overflow: auto; /* 내용이 넘칠 경우 스크롤 가능 */
 }
 
-/* 프로젝 모달 콘텐츠 스타일 */
 .modal-contentPro {
   background-color: rgb(55, 55, 55);
   color: white;
@@ -409,7 +434,7 @@ section h2 {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }

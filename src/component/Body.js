@@ -358,6 +358,102 @@ const Body = () => {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={Coin} alt="Coin" />
+                <div className="project-overlay">
+                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-description">
+                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <h2>아두이노 동전 분류기</h2>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Coin} alt="Coin" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ImgReact} alt="ImgReact" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
+                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
+                            아두이노와 다양한 센서를 이용해 동전을 자동으로
+                            분류하고, 지문 인식을 통해 금고를 열 수 있는
+                            시스템을 개발하였습니다.
+                          </p>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={Coin} alt="Coin" />
+                <div className="project-overlay">
+                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-description">
+                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <h2>아두이노 동전 분류기</h2>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Coin} alt="Coin" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ImgReact} alt="ImgReact" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
+                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
+                            아두이노와 다양한 센서를 이용해 동전을 자동으로
+                            분류하고, 지문 인식을 통해 금고를 열 수 있는
+                            시스템을 개발하였습니다.
+                          </p>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
            
             <SwiperSlide>
               <div className="project-item">
