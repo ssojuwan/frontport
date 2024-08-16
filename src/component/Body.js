@@ -14,12 +14,12 @@ import Js from "../image/js.png";
 import Aws from "../image/aws.png";
 import Android from "../image/android.png";
 import Discord from "../image/discord.jpg";
-import Github from "../image/github.jpg";
+import Github from "../image/github.png";
 import Mysql from "../image/mysql.png";
 import ImgReact from "../image/react.png";
 import Email from "../image/email.svg";
 import Raspberrypi from "../image/raspberrypi.png";
-import Arduino from "../image/arduino.jpg";
+import Arduino from "../image/arduino.png";
 import Coin from "../image/coin.png";
 import Together from "../image/together.png";
 
@@ -259,59 +259,40 @@ const Body = () => {
           <div>
             <p>Frontend</p>
             <hr />
-            <div>
               <img src={Html} alt="Html" />
-            </div>
-            <div>
               <img src={Css} alt="Css" />
-            </div>
-            <div>
               <img src={Js} alt="Js" />
-            </div>
-            <div>
               <img src={ImgReact} alt="React" />
-            </div>
           </div>
           <div>
             <p>Backend</p>
             <hr />
-            <div>
               <img src={Mysql} alt="Mysql" />
-            </div>
+              <img src="https://velog.velcdn.com/images/deep-of-machine/post/3f778fa2-2b43-42b3-9233-091424be7d73/image.png" alt="Python" />
           </div>
           <div>
             <p>Mobile App</p>
             <hr />
-            <div>
               <img src={Android} alt="Android" />
-            </div>
           </div>
           <div>
             <p>Deployment</p>
             <hr />
-            <div>
               <img src={Aws} alt="Aws" />
-            </div>
           </div>
           <div>
             <p>Version Control</p>
             <hr />
-            <div>
               <img src={Github} alt="Github" />
-            </div>
           </div>
           <div>
             <p>Communication</p> <hr />
-            <div>
               <img src={Discord} alt="Discord" />
-            </div>
           </div>
           <div>
             <p>Hardware</p> <hr />
-            <div>
               <img src={Arduino} alt="Arduino" />
               <img src={Raspberrypi} alt="Raspberrypi" />
-            </div>
           </div>
         </div>
       </section>
@@ -377,102 +358,7 @@ const Body = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="project-item">
-                <img src={Coin} alt="Coin" />
-                <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
-                  <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
-                  </p>
-                  <button
-                    className="project-button"
-                    onClick={() =>
-                      openModalPro(
-                        <div>
-                          <h2>아두이노 동전 분류기</h2>
-                          <Swiper
-                            modules={[Navigation, Pagination]}
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
-                            style={{
-                              "--swiper-pagination-color": "white",
-                              "--swiper-navigation-color": "white",
-                            }}
-                          >
-                            <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
-                            </SwiperSlide>
-                          </Swiper>
-                          <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
-                          </p>
-                        </div>
-                      )
-                    }
-                  >
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="project-item">
-                <img src={Coin} alt="Coin" />
-                <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
-                  <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
-                  </p>
-                  <button
-                    className="project-button"
-                    onClick={() =>
-                      openModalPro(
-                        <div>
-                          <h2>아두이노 동전 분류기</h2>
-                          <Swiper
-                            modules={[Navigation, Pagination]}
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
-                            style={{
-                              "--swiper-pagination-color": "white",
-                              "--swiper-navigation-color": "white",
-                            }}
-                          >
-                            <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
-                            </SwiperSlide>
-                          </Swiper>
-                          <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
-                          </p>
-                        </div>
-                      )
-                    }
-                  >
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
+           
             <SwiperSlide>
               <div className="project-item">
                 <img src={Together} alt="Together" />
