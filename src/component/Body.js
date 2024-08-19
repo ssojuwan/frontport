@@ -22,6 +22,7 @@ import Raspberrypi from "../image/raspberrypi.png";
 import Arduino from "../image/arduino.png";
 import Coin from "../image/coin.png";
 import Together from "../image/together.png";
+import Locker from "../image/locker.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -211,35 +212,45 @@ const Body = () => {
           <h2>OverView</h2>
           <div className="overViewContent">
             <p>Q. 프론트앤드 지원 동기</p>
-            학교에서 처음으로 HTML, CSS, JavaScript를 접하면서, <span className="boldP">결과물이
-            즉각적으로 나타나는 프론트엔드 개발</span>에 매력을 느꼈습니다. 이후
-            개인적으로 공부하던 중 React라는 라이브러리를 알게 되었고, 실제
-            프로젝트 경험을 쌓기 위해 'Together'라는 봉사단체와 봉사자를
-            매칭하는 플랫폼에 참여하게 되었습니다. 이 프로젝트에서 저는 게시판
-            CRUD 기능 구현과 컴포넌트 제작을 담당하며, 프론트엔드 개발의 매력과
-            사용자 경험 개선의 중요성을 깊이 이해하게 되었습니다. 이러한 경험을
-            통해 프론트엔드 개발에 대한 열정이 더욱 커졌고, <span className="boldP">사용자 중심의
-            혁신적인 웹 애플리케이션을 개발</span>하고 싶습니다.
+            학교에서 처음으로 HTML, CSS, JavaScript를 접하면서,
+            <span className="boldP">
+              결과물이 즉각적으로 나타나는 프론트엔드 개발
+            </span>
+            에 매력을 느꼈습니다. 이후 개인적으로 공부하던 중 React라는
+            라이브러리를 알게 되었고, 실제 프로젝트 경험을 쌓기 위해
+            'Together'라는 봉사단체와 봉사자를 매칭하는 플랫폼에 참여하게
+            되었습니다. 이 프로젝트에서 저는 게시판 CRUD 기능 구현과 컴포넌트
+            제작을 담당하며, 프론트엔드 개발의 매력과 사용자 경험 개선의
+            중요성을 깊이 이해하게 되었습니다. 이러한 경험을 통해 프론트엔드
+            개발에 대한 열정이 더욱 커졌고,{" "}
+            <span className="boldP">
+              사용자 중심의 혁신적인 웹 애플리케이션을 개발
+            </span>
+            하고 싶습니다.
           </div>
           <br />
           <div className="overViewContent">
-            <p>Q. 본인의 장 · 단점</p>
-            제 장점은 <span className="boldP">새로운 기술에 대한 호기심</span>이
+            <p>Q. 본인의 장 · 단점</p>제 장점은{" "}
+            <span className="boldP">새로운 기술에 대한 호기심</span>이
             많다는겁니다. 저는 항상 최신 웹 기술과 트렌드에 대해 배우고 탐구하는
             것을 즐깁니다. 이러한 호기심 덕분에 다양한 프레임워크와 라이브러리를
             익히며, 문제를 창의적으로 해결하는 능력을 키워왔습니다. 반면, 제
             단점은 조급함입니다. 프로젝트를 진행할 때 결과를 빠르게 보고
             싶어하는 경향이 있어, 때때로 충분한 검토 없이 진행하게 되는 경우가
-            있습니다. 이를 개선하기 위해 최근에는 <span className="boldP">작업의 우선순위</span>를 정하고, 각
-            단계에서 충분한 시간을 할애하도록 노력하고 있습니다.
+            있습니다. 이를 개선하기 위해 최근에는{" "}
+            <span className="boldP">작업의 우선순위</span>를 정하고, 각 단계에서
+            충분한 시간을 할애하도록 노력하고 있습니다.
           </div>
           <br />
           <div className="overViewContent">
             <p>Q. 가치관</p>
-            프론트엔드 개발자로서 제 가치관은 <span className="boldP">피드백과 개선</span>입니다. 모든
-            프로젝트가 처음부터 완벽할 수는 없다고 생각합니다. 그러나 좋은
-            개발자는 사용자와 팀원으로부터 받은 <span className="boldP">개선 방안을 적극적으로 수용</span>하여
-            프로젝트를 발전시킬 수 있습니다. <span className="boldP">피드백을 통한 반복적인 개선 과정</span>을
+            프론트엔드 개발자로서 제 가치관은{" "}
+            <span className="boldP">피드백과 개선</span>입니다. 모든 프로젝트가
+            처음부터 완벽할 수는 없다고 생각합니다. 그러나 좋은 개발자는
+            사용자와 팀원으로부터 받은{" "}
+            <span className="boldP">개선 방안을 적극적으로 수용</span>하여
+            프로젝트를 발전시킬 수 있습니다.{" "}
+            <span className="boldP">피드백을 통한 반복적인 개선 과정</span>을
             통해 더욱 사용자 친화적이고, 사용자에게 더 나은 경험을 제공할 수
             있습니다. 또한, 팀 내에서의 피드백을 통해 동료 개발자, 디자이너,
             기획자와 원활하게 소통하며 서로의 아이디어를 공유하고, 더 나은
@@ -259,40 +270,43 @@ const Body = () => {
           <div>
             <p>Frontend</p>
             <hr />
-              <img src={Html} alt="Html" />
-              <img src={Css} alt="Css" />
-              <img src={Js} alt="Js" />
-              <img src={ImgReact} alt="React" />
+            <img src={Html} alt="Html" />
+            <img src={Css} alt="Css" />
+            <img src={Js} alt="Js" />
+            <img src={ImgReact} alt="React" />
           </div>
           <div>
             <p>Backend</p>
             <hr />
-              <img src={Mysql} alt="Mysql" />
-              <img src="https://velog.velcdn.com/images/deep-of-machine/post/3f778fa2-2b43-42b3-9233-091424be7d73/image.png" alt="Python" />
+            <img src={Mysql} alt="Mysql" />
+            <img
+              src="https://velog.velcdn.com/images/deep-of-machine/post/3f778fa2-2b43-42b3-9233-091424be7d73/image.png"
+              alt="Python"
+            />
           </div>
           <div>
             <p>Mobile App</p>
             <hr />
-              <img src={Android} alt="Android" />
+            <img src={Android} alt="Android" />
           </div>
           <div>
             <p>Deployment</p>
             <hr />
-              <img src={Aws} alt="Aws" />
+            <img src={Aws} alt="Aws" />
           </div>
           <div>
             <p>Version Control</p>
             <hr />
-              <img src={Github} alt="Github" />
+            <img src={Github} alt="Github" />
           </div>
           <div>
             <p>Communication</p> <hr />
-              <img src={Discord} alt="Discord" />
+            <img src={Discord} alt="Discord" />
           </div>
           <div>
             <p>Hardware</p> <hr />
-              <img src={Arduino} alt="Arduino" />
-              <img src={Raspberrypi} alt="Raspberrypi" />
+            <img src={Arduino} alt="Arduino" />
+            <img src={Raspberrypi} alt="Raspberrypi" />
           </div>
         </div>
       </section>
@@ -323,7 +337,20 @@ const Body = () => {
                     onClick={() =>
                       openModalPro(
                         <div>
-                          <h2>아두이노 동전 분류기</h2>
+                          <div className="projectType">
+                            <div>
+                              <span>개인 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>아두이노</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            아두이노 동전 분류기
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2019.05~2019.06
+                          </p>
                           <Swiper
                             modules={[Navigation, Pagination]}
                             spaceBetween={50}
@@ -339,16 +366,55 @@ const Body = () => {
                               <img src={Coin} alt="Coin" />
                             </SwiperSlide>
                             <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
+                              <img src={Locker} alt="Locker" />
                             </SwiperSlide>
                           </Swiper>
                           <p>
                             아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
+                            프로젝트입니다. 이 프로젝트에서는
                             아두이노와 다양한 센서를 이용해 동전을 자동으로
                             분류하고, 지문 인식을 통해 금고를 열 수 있는
                             시스템을 개발하였습니다.
                           </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>
+                              아두이노를 활용한 동전 분류 및 지문인식 금고
+                            </li>
+                            <li>지문 인식 센서 활용</li>
+                            <li>초음파 센서 활용</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>C++</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>하드웨어</li>
+                              <ul>
+                                <li>하드웨어 틀 제작</li>
+                              </ul>
+                              <li>소프트웨어</li>
+                              <ul>
+                                <li>초음파 센서 인식 코드 작성</li>
+                                <li>지문 인식 센서 코드 작성</li>
+                                <li>
+                                  초음파 센서 인식 후 동전 카운트 코드 작성
+                                </li>
+                              </ul>
+                              <li>프로젝트 일정관리</li>
+                            </ul>
+                            <h2>회고</h2>
+                            처음 프로젝트를 진행하면서 주제 선정과 일정 관리에
+                            어려움을 겪었지만, 차근차근 계획을 세워 하드웨어
+                            제작과 센서 연결 작업을 진행했습니다. 시간이
+                            지나면서 프로젝트가 점차 구체화되고, 각 단계가
+                            성공적으로 구현될 때마다 성취감을 느끼며 개발에 대한
+                            흥미가 점점 커졌습니다. 다만, 모든 시스템은 구현에
+                            성공했지만, 하드웨어 구성 과정에서 기술적인 한계로
+                            인해 동전 분류가 완벽하게 이루어지지 않은 점은
+                            아쉬움으로 남았습니다. 하지만 이러한 경험을 통해
+                            문제 해결 능력을 더욱 키울 수 있었고, 앞으로
+                            기술적인 도전에 대한 자신감을 얻게 되었습니다.
+                          </div>
                         </div>
                       )
                     }
@@ -358,103 +424,7 @@ const Body = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="project-item">
-                <img src={Coin} alt="Coin" />
-                <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
-                  <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
-                  </p>
-                  <button
-                    className="project-button"
-                    onClick={() =>
-                      openModalPro(
-                        <div>
-                          <h2>아두이노 동전 분류기</h2>
-                          <Swiper
-                            modules={[Navigation, Pagination]}
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
-                            style={{
-                              "--swiper-pagination-color": "white",
-                              "--swiper-navigation-color": "white",
-                            }}
-                          >
-                            <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
-                            </SwiperSlide>
-                          </Swiper>
-                          <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
-                          </p>
-                        </div>
-                      )
-                    }
-                  >
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="project-item">
-                <img src={Coin} alt="Coin" />
-                <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
-                  <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
-                  </p>
-                  <button
-                    className="project-button"
-                    onClick={() =>
-                      openModalPro(
-                        <div>
-                          <h2>아두이노 동전 분류기</h2>
-                          <Swiper
-                            modules={[Navigation, Pagination]}
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            navigation
-                            pagination={{ clickable: true }}
-                            style={{
-                              "--swiper-pagination-color": "white",
-                              "--swiper-navigation-color": "white",
-                            }}
-                          >
-                            <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
-                            </SwiperSlide>
-                          </Swiper>
-                          <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
-                          </p>
-                        </div>
-                      )
-                    }
-                  >
-                    자세히 보기
-                  </button>
-                </div>
-              </div>
-            </SwiperSlide>
-           
+
             <SwiperSlide>
               <div className="project-item">
                 <img src={Together} alt="Together" />
@@ -473,6 +443,102 @@ const Body = () => {
                             봉사자를 매칭하는 플랫폼입니다. 이 프로젝트에서는
                             사용자 인터페이스를 구성하고, 게시판 CRUD 기능을
                             구현하였습니다.
+                          </p>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={Coin} alt="Coin" />
+                <div className="project-overlay">
+                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-description">
+                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <h2>아두이노 동전 분류기</h2>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Coin} alt="Coin" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ImgReact} alt="ImgReact" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
+                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
+                            아두이노와 다양한 센서를 이용해 동전을 자동으로
+                            분류하고, 지문 인식을 통해 금고를 열 수 있는
+                            시스템을 개발하였습니다.
+                          </p>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={Coin} alt="Coin" />
+                <div className="project-overlay">
+                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-description">
+                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <h2>아두이노 동전 분류기</h2>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Coin} alt="Coin" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ImgReact} alt="ImgReact" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
+                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
+                            아두이노와 다양한 센서를 이용해 동전을 자동으로
+                            분류하고, 지문 인식을 통해 금고를 열 수 있는
+                            시스템을 개발하였습니다.
                           </p>
                         </div>
                       )

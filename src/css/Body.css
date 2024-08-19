@@ -131,8 +131,6 @@ section {
   border-radius: 8px;
 }
 
-
-
 .label {
   font-weight: bold;
   font-size: 1.5rem;
@@ -349,32 +347,27 @@ section h2 {
   padding-top: -30px;
 }
 
-
-.education-table{
+.education-table {
   align-items: center;
   justify-content: center;
-  margin-left : 15px;
-}
-.education-table tr th{
-  background-color: rgb(255, 255, 255);
-  border : 1px solid rgb(f,f,f);
-  font-weight: bold;
-  color : rgb(0, 0, 0);
-  height : 2rem;
-
-}
-.education-table tr td{
-  padding-left: 15px;
-  padding-right: 15px;
-  border : 1px solid rgb(44,44,44);
-  background-color: rgb(44, 44, 44);
-  height : 2rem;
+  margin-left: 15px;
   color : white;
 }
+.education-table tr th {
+  background-color: rgb(255, 255, 255,0);
+  border: 1px solid white;
 
-/* Body.css */
+  font-weight: bold;
+  height: 2rem;
+}
+.education-table tr td {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid white;
+  background-color: rgb(44, 44, 44,0);
+  height: 2rem;
+}
 
-/* 모달의 공통 스타일 */
 .modal,
 .modalPro {
   display: block; /* 모달을 보이도록 설정 */
@@ -389,8 +382,8 @@ section h2 {
 }
 
 .modal-content {
-  background-color: rgb(55,55,55);
-  color : white;
+  background-color: rgb(55, 55, 55);
+  color: white;
   margin: 10% auto; /* 화면 중앙에 위치 */
   padding: 20px;
   border: 1px solid #888;
@@ -403,7 +396,7 @@ section h2 {
 }
 
 .modal-contentPro {
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(44, 44, 44);
   color: white;
   margin: 5% auto; /* 화면 중앙에 위치 */
   padding: 20px;
@@ -411,18 +404,18 @@ section h2 {
   max-width: 90vw; /* 최대 너비 설정 */
   max-height: 80vh; /* 최대 높이 설정 */
   border-radius: 1rem;
-  text-align: center;
+  text-align: left;
   overflow: auto; /* 내용이 넘칠 경우 스크롤 가능 */
   -ms-overflow-style: none;
 }
 
-.modal-contentPro::-webkit-scrollbar{
-  display:none;
+.modal-contentPro::-webkit-scrollbar {
+  display: none;
 }
 
-.modal-contentPro img{
-  width : 25%;
-  height : 15%;
+.modal-contentPro img {
+  width: 25%;
+  height: 15%;
 }
 /* 모달 닫기 버튼 스타일 */
 .close {
@@ -539,7 +532,6 @@ section h2 {
   justify-content: center; /* 항목을 중앙에 정렬 */
   padding: 20px;
   background-color: rgb(35, 35, 35); /* 배경색 설정 */
-  
 }
 
 .project-container {
@@ -547,7 +539,6 @@ section h2 {
   flex-wrap: nowrap; /* 자식 요소들이 한 줄로 수평 정렬되도록 설정 */
   justify-content: center; /* 자식 요소들을 중앙에 정렬 */
   width: 100%; /* 전체 너비로 설정 */
-  
 }
 
 .project-item {
@@ -561,7 +552,6 @@ section h2 {
   position: relative; /* Overlay를 위한 위치 설정 */
   overflow: hidden; /* 자식 요소가 넘치지 않도록 설정 */
   transition: transform 0.3s; /* 부드러운 전환 효과 */
-
 }
 
 .project-item img {
@@ -615,4 +605,32 @@ section h2 {
 
 .project-button:hover {
   background-color: darkorange; /* Hover 시 버튼 배경색 변경 */
+}
+
+.projectType {
+  width: 15%; /* 너비를 자동으로 조정 */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  gap: 5px; /* 요소들 사이의 간격 */
+}
+
+.projectType div {
+  background-color: rgb(66, 66, 66);
+  border: 1px solid white;
+  color: white;
+}
+
+.projectType span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.projectLi {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
 }
