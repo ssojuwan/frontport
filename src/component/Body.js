@@ -23,6 +23,9 @@ import Arduino from "../image/arduino.png";
 import Coin from "../image/coin.png";
 import Together from "../image/together.png";
 import Locker from "../image/locker.png";
+import Togetherflow from "../image/togetherflow.png";
+import Togetherhome from "../image/togetherHome.png";
+import TogetherMain from "../image/togetherMain.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -371,10 +374,9 @@ const Body = () => {
                           </Swiper>
                           <p>
                             아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
+                            프로젝트입니다. 이 프로젝트에서는 아두이노와 다양한
+                            센서를 이용해 동전을 자동으로 분류하고, 지문 인식을
+                            통해 금고를 열 수 있는 시스템을 개발하였습니다.
                           </p>
                           <hr />
                           <div className="projectLi">
@@ -436,14 +438,110 @@ const Body = () => {
                     onClick={() =>
                       openModalPro(
                         <div>
-                          <h2>함께해요 투게더</h2>
-                          <hr />
+                          <div className="projectType">
+                            <div>
+                              <span>팀 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>J S</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            함께해요 투게더
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2022.08~2022.12
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Together} alt="Together" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={Togetherflow} alt="Togetherflow" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={TogetherMain} alt="TogetherMain" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={Togetherhome} alt="Togetherhome" />
+                            </SwiperSlide>
+                          </Swiper>
                           <p>
                             리액트 기반의 웹 페이지 개발 프로젝트로, 봉사단체와
                             봉사자를 매칭하는 플랫폼입니다. 이 프로젝트에서는
                             사용자 인터페이스를 구성하고, 게시판 CRUD 기능을
                             구현하였습니다.
                           </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>봉사기관 및 봉사자를 위한 매칭 서비스</li>
+                            <li>로그인 계정에 따른 접근 통제</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>MySQL</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>공지사항 CRUD 게시판</li>
+                              <ul>
+                                <li>게시판의 기본 기능인 CRUD를 구현</li>
+                                <li>
+                                  Axios 라이브러리를 이용하여 서버와 통신 구축
+                                </li>
+                              </ul>
+                            </ul>
+                            <ul>
+                              <li>로그인 계정에 따른 접근 권한 부여</li>
+                              <ul>
+                                <li>
+                                  관리자 계정으로 로그인 시 공지사항 CRUD가능{" "}
+                                </li>
+                                <li>
+                                  사용자 계정으로 로그인 시 공지사항 Read만 가능
+                                </li>
+                              </ul>
+                            </ul>
+                            <ul>
+                              <li>DB 정의서 작성</li>
+                              <li>플로우 차트 작성</li>
+                            </ul>
+                            <h2>회고</h2>
+                            "함께해요 투게더" 프로젝트를 통해 처음으로 장기 팀
+                            프로젝트를 경험하며 많은 것을 배울 수 있었습니다.
+                            프로젝트 매니저(PM) 역할을 맡았던 팀원이 일정을
+                            맞추지 못해 팀원들과의 소통에 어려움이 있었고, 제가
+                            처음으로 리액트를 사용해야 했기 때문에 기술적인
+                            도전도 많았습니다. 리액트의 구조를 이해하기 위해
+                            CRUD 기능을 구현한 게시판을 개발하면서, 기본적인
+                            컴포넌트 설계와 상태 관리 방법을 익혔습니다. 이
+                            과정에서 팀원들과의 협업이 얼마나 중요한지 깊게
+                            이해하게 되었고, 문제를 해결하기 위해 주기적인
+                            소통과 협력의 필요성을 실감했습니다. 특히, 기술적인
+                            문제를 해결하고 프로젝트를 성공적으로 완수하기 위해
+                            팀원들과 함께 노력하며 부족한 부분을 보완할 수
+                            있었습니다. 이 프로젝트는 제게 기술적 역량을 키울
+                            뿐만 아니라, 효과적인 팀워크와 문제 해결 능력을 배울
+                            수 있는 유익한 경험이었습니다. 또한 리액트에 관심을
+                            가지고 깊게 공부할 수 있었던 기회였습니다. 이를 통해
+                            향후 프로젝트에서의 리더십과 협업 능력을 더욱 강화할
+                            수 있을 것이라고 확신합니다.
+                            <h3>GitHub</h3>
+                          </div>
                         </div>
                       )
                     }
