@@ -351,10 +351,10 @@ section h2 {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
-  color : white;
+  color: white;
 }
 .education-table tr th {
-  background-color: rgb(255, 255, 255,0);
+  background-color: rgb(255, 255, 255, 0);
   border: 1px solid white;
 
   font-weight: bold;
@@ -364,7 +364,7 @@ section h2 {
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid white;
-  background-color: rgb(44, 44, 44,0);
+  background-color: rgb(44, 44, 44, 0);
   height: 2rem;
 }
 
@@ -414,8 +414,13 @@ section h2 {
 }
 
 .modal-contentPro img {
-  width: 25%;
-  height: 15%;
+  width: 40%;
+  height : auto;
+}
+
+.modal-contentPro video {
+  width: 50%;
+  height: auto;
 }
 /* 모달 닫기 버튼 스타일 */
 .close {
@@ -487,7 +492,7 @@ section h2 {
 
 .divSkills div .bottom {
   position: absolute; /* 하단에 고정하기 위한 설정 */
-  bottom: 10px; /* 하단 여백 설정 */
+  bottom: 30px; /* 하단 여백 설정 */
   left: 0;
   right: 0;
   display: flex;
@@ -504,7 +509,8 @@ section h2 {
   width: 5vw;
   height: 10vh;
   object-fit: scale-down;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .swiper {
@@ -633,4 +639,20 @@ section h2 {
   margin-left: auto;
   margin-right: auto;
   display: table;
+}
+
+.githubA span {
+  opacity: 0.4;
+  color: lightgray;
+}
+.githubA h3 a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.5;
+}
+
+.githubA h3 a:hover {
+  font-weight: bold;
+  font-size: 1.5rem;
+  opacity: 1;
 }

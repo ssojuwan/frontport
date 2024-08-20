@@ -26,6 +26,18 @@ import Locker from "../image/locker.png";
 import Togetherflow from "../image/togetherflow.png";
 import Togetherhome from "../image/togetherHome.png";
 import TogetherMain from "../image/togetherMain.png";
+import Expression from "../image/expression.png";
+import ReactPracticeColor from "../image/reactPracticeColor.png";
+import ReactPracticeLogin from "../image/reactPracticeLogin.png";
+import ReactPracticeMain from "../image/reactPracticeMain.png";
+import ReactPracticeSignUp from "../image/reactPracticeSignUp.png";
+import ReactPracticeSignUpC from "../image/reactPracticeSignUpC.png";
+import ReactPracticeTemperature from "../image/reactPracticeTemperature.png";
+import ReactPracticeTodo from "../image/reactPraticeTodo.png";
+import AI from "../image/ai.jpg";
+import AI1 from "../image/ai1.png";
+import AI2 from "../image/ai2.png";
+import AI3 from "../image/ai3.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -416,6 +428,7 @@ const Body = () => {
                             아쉬움으로 남았습니다. 하지만 이러한 경험을 통해
                             문제 해결 능력을 더욱 키울 수 있었고, 앞으로
                             기술적인 도전에 대한 자신감을 얻게 되었습니다.
+                            <hr />
                           </div>
                         </div>
                       )
@@ -540,7 +553,15 @@ const Body = () => {
                             가지고 깊게 공부할 수 있었던 기회였습니다. 이를 통해
                             향후 프로젝트에서의 리더십과 협업 능력을 더욱 강화할
                             수 있을 것이라고 확신합니다.
-                            <h3>GitHub</h3>
+                            <hr />
+                            <div className="githubA">
+                              <span>깃허브를 클릭하면 이동합니다.</span>
+                              <h3>
+                                <a href="https://github.com/ssojuwan/together">
+                                  GitHub
+                                </a>
+                              </h3>
+                            </div>
                           </div>
                         </div>
                       )
@@ -551,20 +572,37 @@ const Body = () => {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="project-item">
-                <img src={Coin} alt="Coin" />
+                <img src={Expression} alt="Expression" />
                 <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-title">표정 분석 AI</p>
                   <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                    표정 분석을 통한 노래 추천
                   </p>
                   <button
                     className="project-button"
                     onClick={() =>
                       openModalPro(
                         <div>
-                          <h2>아두이노 동전 분류기</h2>
+                          <div className="projectType">
+                            <div>
+                              <span>팀 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>Python</span>
+                            </div>
+                            <div>
+                              <span>A I</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            표정 인식 및 분석을 통한 노래 추천 AI
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2022.10~2022.12
+                          </p>
                           <Swiper
                             modules={[Navigation, Pagination]}
                             spaceBetween={50}
@@ -577,19 +615,70 @@ const Body = () => {
                             }}
                           >
                             <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
+                              <img src={Expression} alt="Expression"/>
                             </SwiperSlide>
                           </Swiper>
                           <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
+                            파이썬을 기반으로 한 AI 개발 프로젝트로, 사람의
+                            표정을 분석하여 기분에 맞는 음악을 추천해주는 간단한
+                            AI입니다. 이 프로젝트에서는 OpenCV 라이브러리를
+                            사용하여 표정을 분석한 후, CNN 학습 모델의 결과를
+                            불러와 음악 추천 기능을 구현하였습니다.
                           </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>
+                              OpenCV라이브러리를 활용한 얼굴 인식 및 표정 분석
+                            </li>
+                            <li>CNN 학습 모델에 따른 표정 분류 후 음악 추천</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>Python</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>CNN 모델 학습</li>
+                              <ul>
+                                <li>
+                                  AI 모델을 위한 학습 데이터 준비 및 트레이닝
+                                </li>
+                              </ul>
+                            </ul>
+                            <ul>
+                              <li>OpenCV 라이브러리 활용</li>
+                              <ul>
+                                <li>OpenCV 라이브러리 조사 및 적용</li>
+                              </ul>
+                            </ul>
+                            <h2>회고</h2>
+                            프로젝트를 진행하면서 데이터의 중요성을 깊이
+                            실감했습니다. 모델의 성능이 학습 데이터의 질에 크게
+                            의존한다는 것을 깨달았고, 데이터를 충분히 준비하고
+                            전처리하는 것이 얼마나 중요한지 알게 되었습니다.
+                            OpenCV와 같은 라이브러리를 효과적으로 활용하여
+                            프로젝트의 생산성을 크게 향상시킬 수 있었습니다.
+                            또한, CNN 모델의 하이퍼파라미터를 조정하면서 모델
+                            성능 최적화의 필요성을 느꼈고, 지속적인 실험과
+                            조정이 중요하다는 것을 깨달았습니다. 마지막으로,
+                            이론적으로 완벽한 모델이라도 실제 적용 시 예상치
+                            못한 문제가 발생할 수 있음을 경험하며, 사용자 경험을
+                            고려한 추가적인 개선이 필요하다는 점을 인식하게
+                            되었습니다. 추후 프로젝트를 다시 진행할 때는, 설정된
+                            음악 대신 알고리즘을 통해 유형별로 음악을 추천할 수
+                            있는 기능을 구현하고 싶습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/expression.pdf`}
+                                  download="expression.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
                         </div>
                       )
                     }
@@ -599,20 +688,37 @@ const Body = () => {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="project-item">
-                <img src={Coin} alt="Coin" />
+                <img src={ReactPracticeMain} alt="ReactPracticeMain" />
                 <div className="project-overlay">
-                  <p className="project-title">아두이노 동전 분류기</p>
+                  <p className="project-title">리액트 실습 프로젝트 모음</p>
                   <p className="project-description">
-                    아두이노를 활용한 <br /> 동전 분류 및 지문 인식 금고 제작
+                    간단한 실습 프로젝트 모음
                   </p>
                   <button
                     className="project-button"
                     onClick={() =>
                       openModalPro(
                         <div>
-                          <h2>아두이노 동전 분류기</h2>
+                          <div className="projectType">
+                            <div>
+                              <span>개인 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>J S</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            리액트 실습 프로젝트 모음
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2023.04~2023.06
+                          </p>
                           <Swiper
                             modules={[Navigation, Pagination]}
                             spaceBetween={50}
@@ -625,19 +731,257 @@ const Body = () => {
                             }}
                           >
                             <SwiperSlide>
-                              <img src={Coin} alt="Coin" />
+                              <img
+                                src={ReactPracticeMain}
+                                alt="ReactPracticeMain"
+                              />
                             </SwiperSlide>
                             <SwiperSlide>
-                              <img src={ImgReact} alt="ImgReact" />
+                              <img
+                                src={ReactPracticeSignUp}
+                                alt="ReactPracticeSignUp"
+                              />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img
+                                src={ReactPracticeSignUpC}
+                                alt="ReactPracticeSignUpC"
+                              />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img
+                                src={ReactPracticeLogin}
+                                alt="ReactPracticeLogin"
+                              />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img
+                                src={ReactPracticeColor}
+                                alt="ReactPracticeColor"
+                              />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img
+                                src={ReactPracticeTodo}
+                                alt="ReactPracticeTodo"
+                              />
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                              <img
+                                src={ReactPracticeTemperature}
+                                alt="ReactPracticeTemperature"
+                              />
                             </SwiperSlide>
                           </Swiper>
                           <p>
-                            아두이노를 활용한 동전 분류 및 지문 인식 금고 제작
-                            프로젝트에 대한 자세한 설명입니다. 이 프로젝트에서는
-                            아두이노와 다양한 센서를 이용해 동전을 자동으로
-                            분류하고, 지문 인식을 통해 금고를 열 수 있는
-                            시스템을 개발하였습니다.
+                            리액트 기반의 실습 프로젝트 모음으로, 강의를 통해
+                            배운 다양한 간단한 프로젝트들을 모아놓았습니다. 이
+                            프로젝트들은 로컬 스토리지를 활용하여 기본적인
+                            회원가입과 로그인 기능을 구현하였으며, 컴포넌트들을
+                            분리하여 리액트의 기본 구조를 잘 유지했습니다.
+                            리액트를 학습하며, 간단히 활용할 만한 프로젝트로
+                            구성되었습니다.
                           </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>
+                              로컬 스토리지를 활용한 회원가입 및 로그인 구현
+                            </li>
+                            <li>배경색 추가 및 변경 기능</li>
+                            <li>반응형 디자인을 위한 border 및 width 조정</li>
+                            <li>간단한 To-Do List 기능</li>
+                            <li>리액트 상태 기반의 UI 업데이트</li>
+                            <li>
+                              섭씨 온도와 화씨 온도 변환 (배경색 변화 포함)
+                            </li>
+                            <li>숫자 맞추기 게임과 다크 모드 변환 기능</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <ul>
+                              <li>JavaScript</li>
+                              <li>React</li>
+                              <li>CSS</li>
+                            </ul>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>일정 관리</li>
+                              <li>
+                                전체 구조 정의 후 개발
+                                <ul>
+                                  <li>리액트 기본 구조를 따르며 개발</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h2>회고</h2>
+                            학교 강의를 통해 배운 리액트의 기본 구조를 충실히
+                            따르며 다양한 기능을 구현한 이 웹 페이지 프로젝트는
+                            로컬 스토리지를 활용한 회원가입 및 로그인, 사용자
+                            입력에 따라 실시간으로 반응하는 색상과 디자인 조정
+                            기능, 간단한 To-Do List, 섭씨와 화씨 온도 변환 및
+                            배경색 변화, 그리고 다크 모드를 지원하는 숫자 맞추기
+                            게임을 포함하고 있으며, 이 과정을 통해 리액트의 상태
+                            관리와 동적 UI 업데이트를 깊이 이해하고, 실제
+                            애플리케이션 개발에 대한 자신감을 얻는 데 큰 도움이
+                            되었습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/reactPracticePDF.pdf`}
+                                  download="reactPracticePDF.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://github.com/ssojuwan/together">
+                                  GitHub
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={AI} alt="AI" />
+                <div className="project-overlay">
+                  <p className="project-title">
+                    AI(Linear, Binary, Multi-class)모델
+                  </p>
+                  <p className="project-description">간단한 AI 프로젝트</p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>팀프로젝트</span>
+                            </div>
+                            <div>
+                              <span>Python</span>
+                            </div>
+                            <div>
+                              <span>A I</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            AI(Linear, Binary, Multi-class)모델
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2023.03~2023.06
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                            <img src={AI1} alt="AI1" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                            <img src={AI2} alt="AI2" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                            <img src={AI3} alt="AI3" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            파이썬 기반의 AI 개발 프로젝트에서, 1) Linear
+                            Regression을 활용한 보험료 예측 모델, 2) Binary
+                            Classification을 활용한 수질 판별 모델, 3)
+                            Multi-class Classification을 활용한 와인 품질 예측
+                            모델을 개발했습니다. 데이터는 Kaggle에서 참조하여
+                            모델을 학습시켰습니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>
+                              Linear-Regression, Binary-Classification,
+                              Multi-class Classification을 이용하여 모델 학습 후
+                              예측치 출력
+                            </li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>Python</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>
+                                Kaggle 데이터 선별
+                                <ul>
+                                  <li>
+                                    Kaggle에서 가공하기 쉬운 데이터 선별 및 가공
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                AI 모델 학습
+                                <ul>
+                                  <li>
+                                    가공된 데이터를 사용하여 AI 모델에 가중치를
+                                    조정하며 학습 반복
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <h2>회고</h2>이 프로젝트는 Linear Regression, Binary
+                            Classification, Multi-class Classification을
+                            활용하여 각각 보험료 예측, 수질 판별, 와인 품질 예측
+                            모델을 개발하는 과정이었습니다. Kaggle에서 제공하는
+                            데이터를 활용하여 모델을 학습시키며, 데이터의 선별과
+                            가공이 모델의 성능에 미치는 영향을 깊이
+                            이해했습니다. 데이터 전처리의 중요성을 체감하고, 각
+                            모델에 적합한 학습 방법을 적용하며 반복적인 학습과
+                            가중치 조정의 필요성을 배웠습니다. 또한, 실질적인
+                            문제 해결 과정에서 얻은 경험을 통해 AI 모델 개발에
+                            대한 자신감을 얻었고, 데이터 품질이 예측 정확도에
+                            미치는 영향을 명확히 인식하게 되었습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/AIModel.pdf`}
+                                  download="AIModel.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://colab.research.google.com/drive/1If55QiFlCXLeRxQx01AhYALv0OadNhLf?usp=drive_link">
+                                  Linear-Regression(Colab)
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://colab.research.google.com/drive/1e1eTymOJOaYVcwN_ahZ_DFkEPcciMoYj?usp=drive_link">
+                                  Binary-Classification(Colab)
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://colab.research.google.com/drive/1wln3IC7LA3ZAqgmuB398D87E_9ycyqdB?usp=drive_link">
+                                  Multi-class Classification
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
                         </div>
                       )
                     }
