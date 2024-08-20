@@ -615,7 +615,16 @@ const Body = () => {
                             }}
                           >
                             <SwiperSlide>
-                              <img src={Expression} alt="Expression"/>
+                              <img src={Expression} alt="Expression" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <video controls>
+                                <source
+                                  src="/expressionCut.mp4" // 공용 디렉토리에 상대적 경로로 접근
+                                  type="video/mp4"
+                                />
+                                Your browser does not support the video tag.
+                              </video>
                             </SwiperSlide>
                           </Swiper>
                           <p>
@@ -894,13 +903,13 @@ const Body = () => {
                             }}
                           >
                             <SwiperSlide>
-                            <img src={AI1} alt="AI1" />
+                              <img src={AI1} alt="AI1" />
                             </SwiperSlide>
                             <SwiperSlide>
-                            <img src={AI2} alt="AI2" />
+                              <img src={AI2} alt="AI2" />
                             </SwiperSlide>
                             <SwiperSlide>
-                            <img src={AI3} alt="AI3" />
+                              <img src={AI3} alt="AI3" />
                             </SwiperSlide>
                           </Swiper>
                           <p>
