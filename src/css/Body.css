@@ -415,7 +415,7 @@ section h2 {
 
 .modal-contentPro img {
   width: 40%;
-  height : auto;
+  height: auto;
 }
 
 .modal-contentPro video {
@@ -612,9 +612,8 @@ section h2 {
 .project-button:hover {
   background-color: darkorange; /* Hover 시 버튼 배경색 변경 */
 }
-
 .projectType {
-  width: 15%; /* 너비를 자동으로 조정 */
+  width: 60%; /* 너비를 조정 */
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -622,12 +621,14 @@ section h2 {
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   gap: 5px; /* 요소들 사이의 간격 */
+  flex-direction: row; /* 요소를 가로로 정렬 */
 }
 
 .projectType div {
   background-color: rgb(66, 66, 66);
   border: 1px solid white;
   color: white;
+  padding: 5px 10px; /* 여백 추가 */
 }
 
 .projectType span {

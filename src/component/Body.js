@@ -38,6 +38,17 @@ import AI from "../image/ai.jpg";
 import AI1 from "../image/ai1.png";
 import AI2 from "../image/ai2.png";
 import AI3 from "../image/ai3.png";
+import mfcExcel from "../image/mfcExcel.png";
+import mfcMain from "../image/mfcMain.png";
+import mfcRecipt from "../image/mfcRecipt.png";
+import ycBar from "../image/ycbar.png";
+import ycbarFlow from "../image/ycbarFlow.jpg";
+import ycbarFlow2 from "../image/ycbarFlow2.png";
+import ycbarFlow3 from "../image/ycbarFlow3.jpg";
+import ycbarPlan from "../image/ycbarPlan.png";
+import AWSArc from "../image/AWS.jpg";
+import Gunjang1 from "../image/gunjang1.png";
+import Gunjang2 from "../image/gunjang2.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -289,6 +300,12 @@ const Body = () => {
             <img src={Css} alt="Css" />
             <img src={Js} alt="Js" />
             <img src={ImgReact} alt="React" />
+            <img
+              src={
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Microsoft_Foundation_Class_logo.svg/180px-Microsoft_Foundation_Class_logo.svg.png"
+              }
+              alt="MFC"
+            />
           </div>
           <div>
             <p>Backend</p>
@@ -686,6 +703,11 @@ const Body = () => {
                                   PDF
                                 </a>
                               </h3>
+                              <h3>
+                                <a href="https://github.com/ssojuwan/expression">
+                                  GitHub
+                                </a>
+                              </h3>
                             </div>
                           </div>
                         </div>
@@ -845,7 +867,7 @@ const Body = () => {
                                 </a>
                               </h3>
                               <h3>
-                                <a href="https://github.com/ssojuwan/together">
+                                <a href="https://github.com/ssojuwan/reactClass">
                                   GitHub
                                 </a>
                               </h3>
@@ -987,6 +1009,536 @@ const Body = () => {
                               <h3>
                                 <a href="https://colab.research.google.com/drive/1wln3IC7LA3ZAqgmuB398D87E_9ycyqdB?usp=drive_link">
                                   Multi-class Classification
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={mfcMain} alt="mfcMain" />
+                <div className="project-overlay">
+                  <p className="project-title">MFC 프로젝트</p>
+                  <p className="project-description">
+                    카페 키오스크 및 영수증 출력 시스템
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>개인 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>C++</span>
+                            </div>
+                            <div>
+                              <span>MFC</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            카페 키오스크 및 영수증 출력 시스템
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2023.07~2023.12
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={mfcMain} alt="mfcMain" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={mfcExcel} alt="mfcExcel" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={mfcRecipt} alt="mfcRecipt" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            MFC기반의 음료 주문 및 영수증 출력 시스템입니다.
+                            학교에서 배운 MFC기반의 개인 프로젝트를
+                            진행하였습니다. MFC 기반의 음료 주문 및 영수증 출력
+                            시스템은 사용자 인터페이스를 통해 음료를 선택하고
+                            주문할 수 있도록 설계된 응용 프로그램입니다.
+                            사용자는 다양한 음료 목록에서 원하는 음료를
+                            선택하고, 주문 내용을 확인한 후 결제 단계를
+                            진행합니다. 주문이 완료되면 시스템은 주문 정보를
+                            바탕으로 영수증을 생성하고 출력합니다. 이 시스템은
+                            MFC의 다이얼로그 및 컨트롤 기능을 활용하여
+                            직관적이고 사용자 친화적인 인터페이스를 제공하며,
+                            데이터 처리를 통해 실시간으로 주문 내역을 관리하고
+                            기록할 수 있도록 설계되었습니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>음료 주문</li>
+                            <li>영수증 출력</li>
+                            <li>주문 내역 엑셀로 변환</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>C++</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>프로젝트 주제 선정 및 일정 관리</li>
+                              <li>MFC 프로젝트 개발</li>
+                            </ul>
+                            <h2>회고</h2>
+                            이번 MFC 기반의 음료 주문 및 영수증 출력 시스템 개발
+                            프로젝트를 통해 MFC의 다이얼로그 관리와 이벤트
+                            처리에 대한 이해를 더욱 깊게 할 수 있었습니다. 특히,
+                            사용자 인터페이스 설계와 데이터 처리의 통합 작업에서
+                            발생한 문제들을 해결하면서 실무에서의 응용 능력을
+                            키울 수 있었습니다. 그러나 일부 기능 구현 과정에서
+                            예상보다 시간이 더 소요되었고, 초기 설계 단계에서
+                            충분한 테스트 케이스를 고려하지 못한 부분이 있어
+                            향후 프로젝트에서는 사전 기획과 테스트의 중요성을
+                            더욱 강조할 필요성을 느꼈습니다. 전반적으로 이번
+                            프로젝트는 MFC를 활용한 시스템 개발 능력을 강화하는
+                            소중한 경험이었으며, 앞으로의 개발에 있어서도 배운
+                            점들을 잘 적용할 수 있을 것 같습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/MFC.pdf`}
+                                  download="MFC.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://github.com/ssojuwan/MFCCAFE">
+                                  GitHub
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={ycBar} alt="ycBar" />
+                <div className="project-overlay">
+                  <p className="project-title">YC Bar</p>
+                  <p className="project-description">
+                    아두이노, 라즈베리파이를 활용한 칵테일 머신
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>팀 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>C++</span>
+                            </div>
+                            <div>
+                              <span>Python</span>
+                            </div>
+                            <div>
+                              <span>A I</span>
+                            </div>
+                            <div>
+                              <span>Android Studio</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            아두이노, 라즈베리파이를 이용한 칵테일 머신
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2023.07~2023.12
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={ycBar} alt="ycBar" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ycbarFlow} alt="ycbarFlow" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ycbarFlow2} alt="ycbarFlow2" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ycbarFlow3} alt="ycbarFlow3" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={ycbarPlan} alt="ycbarPlan" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            아두이노, 라즈베리파이 기반의 칵테일 머신입니다.
+                            안드로이드 어플리케이션을 활용하여 기본 등록된
+                            칵테일 레시피를 사용하거나 사용자 맞춤형 레시피를
+                            등록할 수 있으며, 선택된 레시피는 ‘칵테일 제조
+                            머신’으로 전달되어 완전 자동으로 칵테일이
+                            제조됩니다. 또한, AI 음성인식 기술을 통해 사용자는
+                            원하는 칵테일 도수에 맞는 레시피 추천을 받을 수
+                            있고, 특정 분위기에 어울리는 노래 추천도 받을 수
+                            있습니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>음료 제작</li>
+                            <li>신규 음료 등록</li>
+                            <li>음성 인식</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>C++</li>
+                            <li>Python</li>
+                            <li>Android Studio</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>PM</li>
+                              <ul>
+                                <li>개발 문서 작성</li>
+                                <li>프로젝트 주제 선정 및 일정 관리</li>
+                                <li>개발 스프린트 일정 관리</li>
+                              </ul>
+                            </ul>
+                            <ul>
+                              <li>칵테일 머신 제작</li>
+                              <ul>
+                                <li>음성인식 AI 파이썬 코드 개발</li>
+                                <li>
+                                  라즈베리 파이, 아두이노, 파이썬 통신 코드 작성
+                                </li>
+                                <li>하드웨어 제작</li>
+                              </ul>
+                            </ul>
+                            <h2>회고</h2>
+                            프로젝트를 진행하며 처음 맡은 PM 역할이 익숙하지
+                            않아 일정 관리에 어려움을 겪었습니다. 팀원으로서의
+                            경험을 살려 최선을 다했지만, 예상과 달리 프로젝트
+                            진행 중 여러 문제에 직면했습니다. 특히 하드웨어 설계
+                            미숙으로 인해 머신 오작동과 라즈베리파이, 아두이노,
+                            파이썬, 안드로이드 어플리케이션 간의 통신이 원활하지
+                            않았습니다. 그러나 팀원들과의 긴밀한 소통을 통해
+                            해결 방안을 모색하며, 계획된 일정에 맞춰 프로젝트를
+                            완료했습니다. 음성인식 AI 학습에 필요한 데이터
+                            부족으로 정확도 문제도 있었지만, 관련 라이브러리를
+                            조사하며 이를 극복할 수 있었습니다. 비록 처음 맡은
+                            PM 역할이었지만, 이 경험을 바탕으로 향후
+                            프로젝트에서도 좋은 결과물을 만들어낼 수 있을 것
+                            같습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/YCbar.pdf`}
+                                  download="YCbar.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://github.com/jiseo0ok/rasberry-ycbar">
+                                  GitHub
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://youtu.be/kUIPVLE4iqI?si=MRgH1hUgaRm61qPW&t=154">
+                                  YouTube 관련 영상
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={AWSArc} alt="AWSArc" />
+                <div className="project-overlay">
+                  <p className="project-title">AWS Cloud</p>
+                  <p className="project-description">
+                    AWS를 활용한 설문조사 웹 서비스
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>개인 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>AWS</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            AWS 아키텍처를 이용한 설문조사 웹 서비스
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2023.10~2023.12
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={AWSArc} alt="AWSArc" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            AWS를 활용하여 간단한 설문조사를 할 수 있는 서비스
+                            아키텍처를 설계하였습니다. EC2, S3, CloudFront, EIP,
+                            RDS, Auto Scaling, Cloud Watch, GitHub를 이용하여
+                            서비스 아키텍처를 구성하였습니다. GitHub에 업로드한
+                            리액트 기반 웹사이트는 EC2에 반영되며, EC2와 S3는
+                            연동되어 CloudFront를 통해 글로벌 배포가
+                            이루어집니다. 사용자와 관리자 웹 페이지는 서로 다른
+                            접속 권한을 필요로 하므로 보안 그룹을 통해 IP를
+                            다르게 설정했습니다. EIP를 사용하여 사용자
+                            인스턴스에 고정 IP를 할당하였으며, 같은 리전의 다른
+                            가용 영역에 사용자와 관리자 인스턴스를 분리
+                            배치했습니다. 퍼블릭 서브넷에는 t2.micro EC2
+                            인스턴스를, 프라이빗 서브넷에는 RDS를 배치하여
+                            사용자와 관리자가 같은 MySQL 데이터베이스를
+                            공유하도록 했습니다. Auto Scaling을 통해 사용량에
+                            따라 인스턴스 수를 조정하고, CloudWatch를 이용하여
+                            인스턴스의 CPU 사용량을 모니터링하여 SNS를 통해
+                            관리자에게 이메일 알림을 발송합니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>아키텍처 구성</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>AWS</li>
+                            <li>React</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>아키텍처</li>
+                              <ul>
+                                <li>구성 요소 조사 및 설계</li>
+                              </ul>
+                            </ul>
+                            <h2>회고</h2>
+                            이번 프로젝트에서는 AWS를 활용하여 설문조사 서비스를
+                            구축하였고, 여러 AWS 서비스를 효과적으로 통합하여
+                            성과를 거두었습니다. GitHub에 업로드된 리액트 기반
+                            웹사이트는 EC2에 자동 반영되며, EC2와 S3는 연동되어
+                            CloudFront를 통해 글로벌 배포가 이루어졌습니다.
+                            사용자와 관리자 웹 페이지의 보안은 보안 그룹을 통해
+                            IP를 구분하여 강화하였고, EIP를 통해 사용자
+                            인스턴스에 고정 IP를 할당했습니다. 퍼블릭 서브넷에
+                            t2.micro EC2와 프라이빗 서브넷의 RDS를 배치하여
+                            데이터베이스 접근을 관리하였으며, Auto Scaling과
+                            CloudWatch를 통해 인스턴스의 수를 조정하고 성능
+                            모니터링을 실시하여 관리자에게 적시에 알림을 전달할
+                            수 있었습니다. LinearLab에서는 몇 가지 제한 사항으로
+                            인해 구현이 어려운 부분이 있었습니다. 또한, 아키텍처
+                            설계가 미흡하여 최적화된 구조를 구현하지 못했습니다.
+                            추후에 AWS에 대한 학습을 더 진행하여 보다 깔끔하고
+                            효율적인 아키텍처를 설계해보고 싶습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/AWS.pdf`}
+                                  download="AWS.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={Gunjang2} alt="Gunjang2" />
+                <div className="project-overlay">
+                  <p className="project-title">군장 검사기</p>
+                  <p className="project-description">
+                    로스트 아크 게임의 스펙 검사
+                  </p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>팀 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>JavaScript</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                            <div>
+                              <span>Python</span>
+                            </div>
+                            <div>
+                              <span>A I</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                            <div>
+                              <span>AWS</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            로스트 아크 게임의 스펙 검사 사이트
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2024.03~2024.06
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={Gunjang2} alt="Gunjang2" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={Gunjang1} alt="Gunjang1" />
+                            </SwiperSlide>
+
+                          </Swiper>
+                          <p>
+                            리액트 기반의 로스트아크 스펙 검사 사이트는 WebRTC를
+                            통해 웹에서 화면 공유를 지원하며, OCR 기술을
+                            사용하여 화면 속 텍스트를 읽어 스펙 검사를 수행할 수
+                            있도록 설계되었습니다. 또한, 로스트아크 제작사에서
+                            제공하는 API를 활용하여 스펙 검사 기능을
+                            구현하였습니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <li>스펙검사</li>
+                            <li>WebRTC - OCR 연동</li>
+                            <li>API 통신</li>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>AWS</li>
+                            <li>Python</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>프론트엔드</li>
+                              <ul>
+                                <li>화면 구성 및 디자인</li>
+                                <li>모달창 구현</li>
+                                <li>API 통신</li>
+                              </ul>
+                            </ul>
+                            <h2>회고</h2>
+                            이 프로젝트에서 리액트 기반의 로스트아크 스펙 검사
+                            사이트를 개발하면서, 프론트엔드에 중점을 두고 여러
+                            중요한 기능을 구현했습니다. WebRTC를 통한 화면
+                            공유와 OCR 기술을 연동하여 사용자가 웹에서 직접 스펙
+                            검사를 수행할 수 있는 기능을 제공했습니다. 또한,
+                            로스트아크 제작사 API를 활용하여 스펙 검사 기능을
+                            통합했습니다. 주요 기능으로는 스펙 검사, WebRTC와
+                            OCR 연동, API 통신이 포함되었습니다. 프론트엔드
+                            작업으로는 화면 구성 및 디자인, 모달창 구현, API
+                            통신 등을 맡아 사용자 경험을 향상시키고 인터페이스를
+                            직관적으로 설계하였습니다. 기술적으로는 JavaScript와
+                            React를 중심으로 개발하였으며, AWS와 Python을
+                            보조적으로 활용하였습니다. 이번 프로젝트를 통해
+                            프론트엔드 설계와 구현에서 많은 경험을 얻었으며,
+                            향후에는 더 나은 사용자 경험을 제공하기 위해
+                            지속적으로 기술을 개선하고 싶습니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              {/* 추후 서버 연결 시 코드 수정 필요 */}
+                              <h3>
+                                <a
+                                  href={`${process.env.PUBLIC_URL}/gunjang.pdf`}
+                                  download="gunjang.pdf"
+                                >
+                                  PDF
+                                </a>
+                              </h3>
+                              <h3>
+                                <a href="https://github.com/RPG-Inspection/front/tree/main">
+                                  GitHub
                                 </a>
                               </h3>
                             </div>
