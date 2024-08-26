@@ -49,6 +49,11 @@ import ycbarPlan from "../image/ycbarPlan.png";
 import AWSArc from "../image/AWS.jpg";
 import Gunjang1 from "../image/gunjang1.png";
 import Gunjang2 from "../image/gunjang2.png";
+import port1 from "../image/port1.png";
+import port2 from "../image/port2.png";
+import port3 from "../image/port3.png";
+import port4 from "../image/port4.png";
+import port5 from "../image/port5.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -1477,7 +1482,6 @@ const Body = () => {
                             <SwiperSlide>
                               <img src={Gunjang1} alt="Gunjang1" />
                             </SwiperSlide>
-
                           </Swiper>
                           <p>
                             리액트 기반의 로스트아크 스펙 검사 사이트는 WebRTC를
@@ -1538,6 +1542,112 @@ const Body = () => {
                               </h3>
                               <h3>
                                 <a href="https://github.com/RPG-Inspection/front/tree/main">
+                                  GitHub
+                                </a>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    }
+                  >
+                    자세히 보기
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="project-item">
+                <img src={port1} alt="port1" />
+                <div className="project-overlay">
+                  <p className="project-title">포트폴리오 사이트</p>
+                  <p className="project-description">포트폴리오 사이트</p>
+                  <button
+                    className="project-button"
+                    onClick={() =>
+                      openModalPro(
+                        <div>
+                          <div className="projectType">
+                            <div>
+                              <span>개인 프로젝트</span>
+                            </div>
+                            <div>
+                              <span>JavaScript</span>
+                            </div>
+                            <div>
+                              <span>React</span>
+                            </div>
+                          </div>
+                          <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                            개인 포트폴리오
+                          </h2>
+                          <p style={{ textAlign: "center" }}>
+                            개발 기간 : 2024.08~
+                          </p>
+                          <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{
+                              "--swiper-pagination-color": "white",
+                              "--swiper-navigation-color": "white",
+                            }}
+                          >
+                            <SwiperSlide>
+                              <img src={port1} alt="port1" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={port2} alt="port2" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={port3} alt="port3" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={port4} alt="port4" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                              <img src={port5} alt="port5" />
+                            </SwiperSlide>
+                          </Swiper>
+                          <p>
+                            이 포트폴리오 사이트는 React를 기반으로
+                            제작되었으며, 진행한 다양한 프로젝트들을 한눈에
+                            확인할 수 있도록 구성되어 있습니다. 각 프로젝트에는
+                            상세한 설명과 함께 관련 자료가 포함되어 있어, 작업
+                            과정과 결과물을 쉽게 이해할 수 있습니다. 이 사이트는
+                            HTML, CSS, JavaScript를 활용하여 구축되었으며,
+                            사용자 친화적인 디자인과 직관적인 네비게이션을 통해
+                            포트폴리오를 효과적으로 전달할 수 있도록
+                            최적화되었습니다.
+                          </p>
+                          <hr />
+                          <div className="projectLi">
+                            <h2>주요 기능 및 특징</h2>
+                            <h2>사용 기술 및 언어</h2>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <h2>작업 기여도</h2>
+                            <ul>
+                              <li>프론트엔드</li>
+                            </ul>
+                            <h2>회고</h2>
+                            포트폴리오 웹사이트를 제작하면서 지금까지 진행한
+                            프로젝트들을 정리하고, 배운 기술들을 체계적으로
+                            정리할 수 있었습니다. 이를 통해 부족한 점과 자신
+                            있는 부분을 명확히 파악하는 계기가 되었습니다.
+                            프론트엔드 기술을 활용해 웹 페이지를 제작하며 부족한
+                            점을 보완하고, 새로운 기술을 학습하며 성장할 수
+                            있었습니다. 앞으로도 지속적으로 포트폴리오를 개선해
+                            나갈 예정입니다.
+                            <hr />
+                            <div className="githubA">
+                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <h3>
+                                <a href="https://github.com/ssojuwan/frontport">
                                   GitHub
                                 </a>
                               </h3>
