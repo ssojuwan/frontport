@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from "./component/Header";
 import Body from "./component/Body";
 import Footer from "./component/Footer";
 
