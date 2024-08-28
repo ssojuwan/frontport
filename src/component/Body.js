@@ -103,6 +103,13 @@ const Body = () => {
     setModalContentPro(null);
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -112,18 +119,39 @@ const Body = () => {
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
         <h2>
-          <a href="#">{`SJW's portfolio`}</a>
+          <a onClick={(e) => e.preventDefault()}>{`SJW's portfolio`}</a>
         </h2>
         <nav>
           <ul>
             <li>
-              <a href="#about-section">About</a>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("#about-section");
+                }}
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('#skills');
+              }}
+            >
+              Skills
+            </a>
             </li>
             <li>
-              <a href="#project">Project</a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('#project');
+              }}
+            >
+              Project
+            </a>
             </li>
             <li>
               <a href="https://github.com/">GitHub</a>
@@ -144,7 +172,15 @@ const Body = () => {
         </p>
         <div className="buttonDeo">
           <button>
-            <a href="#about-section">더 알아보기 ↓</a>
+
+          <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("#about-section");
+                }}
+              >
+               더 알아보기 ↓
+              </a>
           </button>
         </div>
       </section>
