@@ -119,39 +119,45 @@ const Body = () => {
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
         <h2>
-          <a onClick={(e) => e.preventDefault()}>{`SJW's portfolio`}</a>
+          <a href="#" onClick={(e) => e.preventDefault()} role="button">
+            {`SJW's portfolio`}
+          </a>
         </h2>
         <nav>
           <ul>
             <li>
               <a
+                href="#"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection("#about-section");
                 }}
+                role="button"
               >
                 About
               </a>
             </li>
             <li>
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('#skills');
-              }}
-            >
-              Skills
-            </a>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("#skills");
+                }}
+                role="button"
+              >
+                Skills
+              </a>
             </li>
             <li>
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('#project');
-              }}
-            >
-              Project
-            </a>
+              <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("#project");
+                }}
+                role="button"
+              >
+                Project
+              </a>
             </li>
             <li>
               <a href="https://github.com/">GitHub</a>
@@ -172,15 +178,15 @@ const Body = () => {
         </p>
         <div className="buttonDeo">
           <button>
-
-          <a
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("#about-section");
-                }}
-              >
-               더 알아보기 ↓
-              </a>
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("#about-section");
+              }}
+              role="button"
+            >
+              더 알아보기 ↓
+            </a>
           </button>
         </div>
       </section>
@@ -1727,9 +1733,9 @@ const Body = () => {
       {modalContentPro && (
         <div className="modalPro">
           <div className="modal-contentPro">
-            <span className="close" onClick={closeModalPro}>
+            <button className="modal-close-button" onClick={closeModalPro}>
               &times;
-            </span>
+            </button>
             {modalContentPro}
           </div>
         </div>

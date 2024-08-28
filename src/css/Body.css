@@ -367,7 +367,7 @@ section h2 {
   background-color: rgb(44, 44, 44, 0);
   height: 2rem;
 }
-
+/* 모달 배경 스타일 */
 .modal,
 .modalPro {
   display: block; /* 모달을 보이도록 설정 */
@@ -381,6 +381,7 @@ section h2 {
   background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
 }
 
+/* 일반 모달 콘텐츠 스타일 */
 .modal-content {
   background-color: rgb(55, 55, 55);
   color: white;
@@ -395,6 +396,7 @@ section h2 {
   overflow: auto; /* 내용이 넘칠 경우 스크롤 가능 */
 }
 
+/* 프로젝트 모달 콘텐츠 스타일 */
 .modal-contentPro {
   background-color: rgb(44, 44, 44);
   color: white;
@@ -422,19 +424,26 @@ section h2 {
   width: 50%;
   height: auto;
 }
+
 /* 모달 닫기 버튼 스타일 */
-.close {
+.modal-close-button {
+  position: fixed; /* 화면에 고정 */
+  right : 5vw;
+  background: rgba(0, 0, 0, 0.8); /* 버튼 배경색 */
   color: #aaa;
-  float: right;
+  border: none;
   font-size: 28px;
   font-weight: bold;
+  padding: 10px;
+  border-radius: 50%; /* 원형 버튼 */
+  cursor: pointer;
+  z-index: 1001; /* 모달보다 위에 위치 */
 }
 
-.close:hover,
-.close:focus {
+.modal-close-button:hover,
+.modal-close-button:focus {
   color: white;
   text-decoration: none;
-  cursor: pointer;
 }
 
 #skills {
