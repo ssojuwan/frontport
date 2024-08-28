@@ -708,13 +708,7 @@ const Body = () => {
                               <img src={Expression} alt="Expression" />
                             </SwiperSlide>
                             <SwiperSlide>
-                              <video controls>
-                                <source
-                                  src="/expressionCut.mp4" // 공용 디렉토리에 상대적 경로로 접근
-                                  type="video/mp4"
-                                />
-                                Your browser does not support the video tag.
-                              </video>
+                            <img src={`${process.env.PUBLIC_URL}/expressionCut.gif`} alt="Expression Cut GIF"/>
                             </SwiperSlide>
                           </Swiper>
                           <p>

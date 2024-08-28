@@ -462,7 +462,7 @@ section h2 {
   font-size: 40px;
   font-weight: bold;
   padding: 10px;
-  border-radius: 1rem; /* 원형 버튼 */
+  border-radius: 50%; /* 원형 버튼 */
   cursor: pointer;
   z-index: 1001; /* 모달보다 위에 위치 */
 }
