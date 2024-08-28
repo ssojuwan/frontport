@@ -89,19 +89,41 @@ const Body = () => {
 
   const openModal = (content) => {
     setModalContent(content);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setModalContent(null);
+    document.body.style.overflow = "unset";
   };
 
   const openModalPro = (content) => {
     setModalContentPro(content);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModalPro = () => {
     setModalContentPro(null);
+    document.body.style.overflow = "unset";
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        if (modalContentPro) {
+          closeModalPro();
+        } else if (modalContent) {
+          closeModal();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [modalContent, modalContentPro]);
 
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
@@ -118,11 +140,10 @@ const Body = () => {
   return (
     <main className="body">
       <header className={`header ${headerTransparent ? "transparent" : ""}`}>
-        <h2>
-          <a href="#" onClick={(e) => e.preventDefault()} role="button">
-            {`SJW's portfolio`}
-          </a>
+        <h2 style={{ cursor: "pointer" }} onClick={() => window.scrollTo(0, 0)}>
+          {`SJW's portfolio`}
         </h2>
+
         <nav>
           <ul>
             <li>
@@ -280,7 +301,7 @@ const Body = () => {
             </div>
           </div>
         </div>
-        <hr className="aboutHr" />
+        <hr className="sectionHr" />
         <div className="overViewDiv">
           <h2>OverView</h2>
           <div className="overViewContent">
@@ -335,6 +356,7 @@ const Body = () => {
           </div>
           <br />
         </div>
+        <hr className="sectionHr" />
       </section>
 
       <section id="skills">
@@ -376,7 +398,9 @@ const Body = () => {
           <div>
             <p>Version Control</p>
             <hr />
-            <img src={Github} alt="Github" />
+            <a href="https://github.com/ssojuwan" target="_blank">
+              <img src={Github} alt="Github" />
+            </a>
           </div>
           <div>
             <p>Communication</p> <hr />
@@ -388,9 +412,11 @@ const Body = () => {
             <img src={Raspberrypi} alt="Raspberrypi" />
           </div>
         </div>
+        <hr className="sectionHr" />
       </section>
 
       <section id="project">
+        <h2 className="projectH2">Project</h2>
         <div className="project-container">
           <Swiper
             modules={[Navigation, Pagination]}
@@ -600,7 +626,7 @@ const Body = () => {
                             <h2>회고</h2>
                             "함께해요 투게더" 프로젝트를 통해 처음으로 장기 팀
                             프로젝트를 경험하며 많은 것을 배울 수 있었습니다.
-                            프로젝트 매니저(PM) 역할을 맡았던 팀원이 일정을
+                            프로젝트 매니저(PM) 역할을 맡았던 학생의 일정을
                             맞추지 못해 팀원들과의 소통에 어려움이 있었고, 제가
                             처음으로 리액트를 사용해야 했기 때문에 기술적인
                             도전도 많았습니다. 리액트의 구조를 이해하기 위해
@@ -1055,7 +1081,7 @@ const Body = () => {
                               </h3>
                               <h3>
                                 <a href="https://colab.research.google.com/drive/1wln3IC7LA3ZAqgmuB398D87E_9ycyqdB?usp=drive_link">
-                                  Multi-class Classification
+                                  Multi-class Classification(Colab)
                                 </a>
                               </h3>
                             </div>
