@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -107,6 +107,22 @@ const Body = () => {
     document.body.style.overflow = "unset";
   };
 
+  const [openIndex, setOpenIndex] = useState(null);
+  const contentRefs = useRef([]);
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  useEffect(() => {
+    contentRefs.current.forEach((content, index) => {
+      if (content) {
+        content.style.maxHeight =
+          openIndex === index ? `${content.scrollHeight}px` : "0";
+        content.style.opacity = openIndex === index ? "1" : "0";
+      }
+    });
+  }, [openIndex]);
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -162,11 +178,11 @@ const Body = () => {
               <a
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection("#skills");
+                  scrollToSection("#overView");
                 }}
                 role="button"
               >
-                Skills
+                OverView
               </a>
             </li>
             <li>
@@ -214,203 +230,220 @@ const Body = () => {
 
       <section id="about-section">
         <h2 className="bodyH2">About me</h2>
-        <div className="profile-picture">
-          <img src={Profile} alt="Profile" />
-        </div>
-        <div id="about">
-          <div className="info-item">
-            <div className="label">이름</div>
-            <div className="value">서주완</div>
-          </div>
-          <div className="info-item">
-            <div className="label">생년월일</div>
-            <div className="value">99.08.24</div>
-          </div>
-          <div className="info-item">
-            <div className="label">주소지</div>
-            <div className="value">경상남도 진주시</div>
-          </div>
-          <div className="info-item">
-            <div className="label">연락처</div>
-            <div className="value">010-5292-6389</div>
-          </div>
-          <div className="info-item">
-            <div className="label">이메일</div>
-            <div className="value">
-              <input
-                type="text"
-                id="copyTxt"
-                value="wndhks990824@naver.com"
-                readOnly
-                style={{ position: "absolute", top: "-9999px" }}
-              />
-              wndhks990824@naver.com
-            </div>
-          </div>
-          <div className="info-item">
-            <div className="label">
-              학력{" "}
-              <button
-                className="eduButton"
-                onClick={() =>
-                  openModal(
-                    <div>
-                      <h2>학력 상세</h2>
-                      <table className="education-table">
-                        <thead>
-                          <tr>
-                            <th>기 간</th>
-                            <th>학 교 명</th>
-                            <th>학과 및 전공</th>
-                            <th>졸업 여부</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>2015.03~2018.02</td>
-                            <td>대아고등학교</td>
-                            <td>이과</td>
-                            <td>졸업</td>
-                          </tr>
-                          <tr>
-                            <td>2018.03~2024.02</td>
-                            <td>연암공과대학교</td>
-                            <td>스마트소프트웨어학과</td>
-                            <td>졸업</td>
-                          </tr>
-                          <tr>
-                            <td>2024.03~</td>
-                            <td>연암공과대학교</td>
-                            <td>스마트소프트웨어학과(심화)</td>
-                            <td>재학중</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  )
-                }
-                style={{ marginLeft: "10px" }}
-              >
-                +
-              </button>
-            </div>
-            <div className="value">
-              연암공과대학교
-              <br />
-              스마트소프트웨어학과(심화)
-            </div>
-          </div>
-        </div>
-        <hr className="sectionHr" />
-        <div className="overViewDiv">
-          <h2>OverView</h2>
-          <div className="overViewContent">
-            <p>Q. 프론트앤드 지원 동기</p>
-            학교에서 처음으로 HTML, CSS, JavaScript를 접하면서,
-            <span className="boldP">
-              결과물이 즉각적으로 나타나는 프론트엔드 개발
-            </span>
-            에 매력을 느꼈습니다. 이후 개인적으로 공부하던 중 React라는
-            라이브러리를 알게 되었고, 실제 프로젝트 경험을 쌓기 위해
-            'Together'라는 봉사단체와 봉사자를 매칭하는 플랫폼에 참여하게
-            되었습니다. 이 프로젝트에서 저는 게시판 CRUD 기능 구현과 컴포넌트
-            제작을 담당하며, 프론트엔드 개발의 매력과 사용자 경험 개선의
-            중요성을 깊이 이해하게 되었습니다. 이러한 경험을 통해 프론트엔드
-            개발에 대한 열정이 더욱 커졌고,{" "}
-            <span className="boldP">
-              사용자 중심의 혁신적인 웹 애플리케이션을 개발
-            </span>
-            하고 싶습니다.
-          </div>
-          <br />
-          <div className="overViewContent">
-            <p>Q. 본인의 장 · 단점</p>제 장점은{" "}
-            <span className="boldP">새로운 기술에 대한 호기심</span>이
-            많다는겁니다. 저는 항상 최신 웹 기술과 트렌드에 대해 배우고 탐구하는
-            것을 즐깁니다. 이러한 호기심 덕분에 다양한 프레임워크와 라이브러리를
-            익히며, 문제를 창의적으로 해결하는 능력을 키워왔습니다. 반면, 제
-            단점은 조급함입니다. 프로젝트를 진행할 때 결과를 빠르게 보고
-            싶어하는 경향이 있어, 때때로 충분한 검토 없이 진행하게 되는 경우가
-            있습니다. 이를 개선하기 위해 최근에는{" "}
-            <span className="boldP">작업의 우선순위</span>를 정하고, 각 단계에서
-            충분한 시간을 할애하도록 노력하고 있습니다.
-          </div>
-          <br />
-          <div className="overViewContent">
-            <p>Q. 가치관</p>
-            프론트엔드 개발자로서 제 가치관은{" "}
-            <span className="boldP">피드백과 개선</span>입니다. 모든 프로젝트가
-            처음부터 완벽할 수는 없다고 생각합니다. 그러나 좋은 개발자는
-            사용자와 팀원으로부터 받은{" "}
-            <span className="boldP">개선 방안을 적극적으로 수용</span>하여
-            프로젝트를 발전시킬 수 있습니다.{" "}
-            <span className="boldP">피드백을 통한 반복적인 개선 과정</span>을
-            통해 더욱 사용자 친화적이고, 사용자에게 더 나은 경험을 제공할 수
-            있습니다. 또한, 팀 내에서의 피드백을 통해 동료 개발자, 디자이너,
-            기획자와 원활하게 소통하며 서로의 아이디어를 공유하고, 더 나은
-            솔루션을 도출할 수 있습니다. 마지막으로, 피드백을 통해 자신의
-            개발물에 부족한 부분을 인식하고 지속적으로 성장할 수 있다고
-            믿습니다. 이러한 가치관을 바탕으로, 저는 더욱 발전하는 프론트엔드
-            개발자가 되고자 합니다.
+        <div className="about-skills-container">
+          <div id="about">
+            <h2 className="bodyH2">About me</h2>
             <br />
+            <div className="profile-picture">
+              <img src={Profile} alt="Profile" />
+            </div>
+
+            <div className="info-item">
+              <div className="label">이름</div>
+              <div className="value">서주완</div>
+            </div>
+            <div className="info-item">
+              <div className="label">주소지</div>
+              <div className="value">경상남도 진주시</div>
+            </div>
+            <div className="info-item">
+              <div className="label">이메일</div>
+              <div className="value">
+                <input
+                  type="text"
+                  id="copyTxt"
+                  value="wndhks990824@naver.com"
+                  readOnly
+                  style={{ position: "absolute", top: "-9999px" }}
+                />
+                wndhks990824@naver.com
+              </div>
+            </div>
+            <div className="info-item">
+              <div className="label">
+                학력{" "}
+                <button
+                  className="eduButton"
+                  onClick={() =>
+                    openModal(
+                      <div>
+                        <h2>학력 상세</h2>
+                        <table className="education-table">
+                          <thead>
+                            <tr>
+                              <th>기 간</th>
+                              <th>학 교 명</th>
+                              <th>학과 및 전공</th>
+                              <th>졸업 여부</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>2015.03~2018.02</td>
+                              <td>대아고등학교</td>
+                              <td>이과</td>
+                              <td>졸업</td>
+                            </tr>
+                            <tr>
+                              <td>2018.03~2024.02</td>
+                              <td>연암공과대학교</td>
+                              <td>스마트소프트웨어학과</td>
+                              <td>졸업</td>
+                            </tr>
+                            <tr>
+                              <td>2024.03~</td>
+                              <td>연암공과대학교</td>
+                              <td>스마트소프트웨어학과(심화)</td>
+                              <td>재학중</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    )
+                  }
+                  style={{ marginLeft: "10px" }}
+                >
+                  +
+                </button>
+              </div>
+              <div className="value">
+                연암공과대학교
+                <br />
+                스마트소프트웨어학과(심화)
+              </div>
+            </div>
           </div>
-          <br />
+
+          <div id="skills">
+            <h2>Skills</h2>
+            <div className="divSkills">
+              <div>
+                <p>Frontend</p>
+                <img src={Html} alt="Html" />
+                <img src={Css} alt="Css" />
+                <img src={Js} alt="Js" />
+                <img src={ImgReact} alt="React" />
+              </div>
+              <div>
+                <p>Backend</p>
+                <img src={Mysql} alt="Mysql" />
+                <img
+                  src="https://velog.velcdn.com/images/deep-of-machine/post/3f778fa2-2b43-42b3-9233-091424be7d73/image.png"
+                  alt="Python"
+                />
+              </div>
+              <div>
+                <p>Mobile App</p>
+                <img src={Android} alt="Android" />
+              </div>
+              <div>
+                <p>Deployment</p>
+                <img src={Aws} alt="Aws" />
+              </div>
+              <div>
+                <p>Version Control</p>
+                <a href="https://github.com/ssojuwan" target="_blank">
+                  <img src={Github} alt="Github" />
+                </a>
+              </div>
+              <div>
+                <p>Communication</p>
+                <img src={Discord} alt="Discord" />
+              </div>
+              <div>
+                <p>Hardware</p>
+                <img src={Arduino} alt="Arduino" />
+                <img src={Raspberrypi} alt="Raspberrypi" />
+              </div>
+            </div>
+          </div>
         </div>
-        <hr className="sectionHr" />
       </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <div className="divSkills">
-          <div>
-            <p>Frontend</p>
-            <hr />
-            <img src={Html} alt="Html" />
-            <img src={Css} alt="Css" />
-            <img src={Js} alt="Js" />
-            <img src={ImgReact} alt="React" />
-            <img
-              src={
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Microsoft_Foundation_Class_logo.svg/180px-Microsoft_Foundation_Class_logo.svg.png"
-              }
-              alt="MFC"
-            />
-          </div>
-          <div>
-            <p>Backend</p>
-            <hr />
-            <img src={Mysql} alt="Mysql" />
-            <img
-              src="https://velog.velcdn.com/images/deep-of-machine/post/3f778fa2-2b43-42b3-9233-091424be7d73/image.png"
-              alt="Python"
-            />
-          </div>
-          <div>
-            <p>Mobile App</p>
-            <hr />
-            <img src={Android} alt="Android" />
-          </div>
-          <div>
-            <p>Deployment</p>
-            <hr />
-            <img src={Aws} alt="Aws" />
-          </div>
-          <div>
-            <p>Version Control</p>
-            <hr />
-            <a href="https://github.com/ssojuwan" target="_blank">
-              <img src={Github} alt="Github" />
-            </a>
-          </div>
-          <div>
-            <p>Communication</p> <hr />
-            <img src={Discord} alt="Discord" />
-          </div>
-          <div>
-            <p>Hardware</p> <hr />
-            <img src={Arduino} alt="Arduino" />
-            <img src={Raspberrypi} alt="Raspberrypi" />
-          </div>
+      <section id="overView">
+        <hr className="sectionHr" />
+
+        <div className="overViewDiv">
+          <h2>OverView</h2>
+          {[
+            {
+              question: "Q. 프론트엔드 지원 동기",
+              answer: (
+                <>
+                  학교에서 처음으로 HTML, CSS, JavaScript를 접하면서,
+                  <span className="boldP">
+                    결과물이 즉각적으로 나타나는 프론트엔드 개발
+                  </span>
+                  에 매력을 느꼈습니다. 이후 개인적으로 공부하던 중 React라는
+                  라이브러리를 알게 되었고, 실제 프로젝트 경험을 쌓기 위해
+                  'Together'라는 봉사단체와 봉사자를 매칭하는 플랫폼에 참여하게
+                  되었습니다. 이 프로젝트에서 저는 게시판 CRUD 기능 구현과
+                  컴포넌트 제작을 담당하며, 프론트엔드 개발의 매력과 사용자 경험
+                  개선의 중요성을 깊이 이해하게 되었습니다. 이러한 경험을 통해
+                  프론트엔드 개발에 대한 열정이 더욱 커졌고,{" "}
+                  <span className="boldP">
+                    사용자 중심의 혁신적인 웹 애플리케이션을 개발
+                  </span>
+                  하고 싶습니다.
+                </>
+              ),
+            },
+            {
+              question: "Q. 본인의 장 · 단점",
+              answer: (
+                <>
+                  제 장점은{" "}
+                  <span className="boldP">새로운 기술에 대한 호기심</span>이
+                  많다는겁니다. 저는 항상 최신 웹 기술과 트렌드에 대해 배우고
+                  탐구하는 것을 즐깁니다. 이러한 호기심 덕분에 다양한
+                  프레임워크와 라이브러리를 익히며, 문제를 창의적으로 해결하는
+                  능력을 키워왔습니다. 반면, 제 단점은 조급함입니다. 프로젝트를
+                  진행할 때 결과를 빠르게 보고 싶어하는 경향이 있어, 때때로
+                  충분한 검토 없이 진행하게 되는 경우가 있습니다. 이를 개선하기
+                  위해 최근에는 <span className="boldP">작업의 우선순위</span>를
+                  정하고, 각 단계에서 충분한 시간을 할애하도록 노력하고
+                  있습니다.
+                </>
+              ),
+            },
+            {
+              question: "Q. 가치관",
+              answer: (
+                <>
+                  프론트엔드 개발자로서 제 가치관은{" "}
+                  <span className="boldP">피드백과 개선</span>입니다. 모든
+                  프로젝트가 처음부터 완벽할 수는 없다고 생각합니다. 그러나 좋은
+                  개발자는 사용자와 팀원으로부터 받은{" "}
+                  <span className="boldP">개선 방안을 적극적으로 수용</span>하여
+                  프로젝트를 발전시킬 수 있습니다.{" "}
+                  <span className="boldP">
+                    피드백을 통한 반복적인 개선 과정
+                  </span>
+                  을 통해 더욱 사용자 친화적이고, 사용자에게 더 나은 경험을
+                  제공할 수 있습니다. 또한, 팀 내에서의 피드백을 통해 동료
+                  개발자, 디자이너, 기획자와 원활하게 소통하며 서로의 아이디어를
+                  공유하고, 더 나은 솔루션을 도출할 수 있습니다. 마지막으로,
+                  피드백을 통해 자신의 개발물에 부족한 부분을 인식하고
+                  지속적으로 성장할 수 있다고 믿습니다. 이러한 가치관을
+                  바탕으로, 저는 더욱 발전하는 프론트엔드 개발자가 되고자
+                  합니다.
+                </>
+              ),
+            },
+          ].map((item, index) => (
+            <div key={index}>
+              <details onClick={() => handleToggle(index)}>
+                <summary className="overViewSummary">{item.question}</summary>
+                <div
+                  className="overViewContent"
+                  ref={(el) => (contentRefs.current[index] = el)}
+                >
+                  {item.answer}
+                </div>
+              </details>
+              <br />
+            </div>
+          ))}
         </div>
         <hr className="sectionHr" />
       </section>
@@ -708,7 +741,10 @@ const Body = () => {
                               <img src={Expression} alt="Expression" />
                             </SwiperSlide>
                             <SwiperSlide>
-                            <img src={`${process.env.PUBLIC_URL}/expressionCut.gif`} alt="Expression Cut GIF"/>
+                              <img
+                                src={`${process.env.PUBLIC_URL}/expressionCut.gif`}
+                                alt="Expression Cut GIF"
+                              />
                             </SwiperSlide>
                           </Swiper>
                           <p>

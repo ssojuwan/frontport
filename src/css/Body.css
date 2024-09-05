@@ -117,11 +117,14 @@ section {
 
 #about {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2열 레이아웃 */
-  grid-auto-rows: min-content; /* 행 높이 자동 조정 */
+  grid-template-columns: 1fr 2fr;
   gap: 20px; /* 항목 사이의 간격 */
 }
 
+.profile-picture{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 .info-item {
   display: flex;
   flex-direction: column; /* 세로 방향으로 배치 */
@@ -269,33 +272,97 @@ section h2 {
   font-weight: bold;
 }
 
-/* About section 스타일 */
-#about-section {
+/* About and Skills container */
+.about-skills-container {
   display: flex;
-  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: space-between;
+  align-items: flex-start; /* 세로 정렬 */
+  gap: 40px;
   padding: 20px;
-  gap: 20px; /* 이미지와 텍스트 사이의 간격 */
-  flex-wrap: wrap; /* 작은 화면에서 레이아웃이 깨지지 않도록 설정 */
-}
-#about-section h2 {
-  text-align: center;
 }
 
-/* Profile picture 컨테이너 스타일 */
+/* About me 섹션 스타일 */
+#about {
+  flex-basis: 45%; /* About me 섹션을 45% 너비로 설정 */
+  min-width: 300px; /* 최소 너비 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
 .profile-picture {
-  flex-shrink: 0; /* 이미지의 크기를 고정 */
-  width: 150px; /* 원하는 너비 설정 */
-  height: 170px; /* 원하는 높이 설정 */
-  border-radius: 30%; /* 원형으로 만들기 */
+  margin: 0 auto; /* 이미지 중앙 정렬 */
+  width: 15vw;
+  height: 40vh;
+  border-radius: 3rem;
   overflow: hidden;
+  align-items: center;
   background-color: white;
+  object-fit: contain;
 }
 
-/* Profile picture 이미지 스타일 */
 .profile-picture img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Skills 섹션 스타일 */
+#skills {
+  flex-basis: 45%; /* Skills 섹션을 45% 너비로 설정 */
+  min-width: 300px;
+}
+
+#skills h2 {
+  text-align: left;
+}
+
+.divSkills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.divSkills div {
+  width: 20%; /* 각 아이템을 22% 너비로 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(55, 55, 55);
+  border-radius: 3rem;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, width 0.3s;
+  margin: 10px;
+}
+
+.divSkills div:hover {
+  background-color: rgb(66, 66, 66);
+  width: 22%;
+}
+
+.divSkills p {
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.divSkills div img {
+  width: 5vw;
+  height: 10vh;
+  object-fit: scale-down;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* 반응형 레이아웃 */
+@media (max-width: 768px) {
+  .about-skills-container {
+    flex-direction: column; /* 작은 화면에서는 세로 배치 */
+    align-items: center;
+  }
+
+  .divSkills div {
+    width: 45%;
+  }
 }
 
 #projects {
@@ -303,9 +370,9 @@ section h2 {
 }
 
 .projectH2 {
-  width : 100%;
+  width: 100%;
   text-align: left;
-  left:0;
+  left: 0;
 }
 
 .sectionHr {
@@ -316,6 +383,7 @@ section h2 {
 .overViewDiv {
   text-align: center;
   width: 100%;
+  margin-bottom: 10vh;
 }
 
 .overViewDiv h2 {
@@ -326,33 +394,45 @@ section h2 {
 }
 
 .overViewContent {
-  width : 80%;
-  margin-left : auto;
-  margin-right : auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 50px;
+  padding-top: 5vh;
   padding-right: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 5vh;
   text-align: left;
-  padding-top: 0;
   border-radius: 2rem;
   font-size: 1.4rem;
   background-color: rgb(71, 71, 71);
   line-height: 2.2rem;
+  overflow: hidden; /* 애니메이션에 필요한 설정 */
+  max-height: 0; /* 초기 상태에서 숨기기 */
+  padding: 5vh; /* 닫힐 때 패딩 조정 */
+  transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
 }
 
-.overViewContent p {
+.overViewContent.show {
+  max-height: 1000px; /* 충분히 큰 값으로 설정 */
+  padding: 5vh 50px;
+  opacity: 1;
+}
+
+.overViewSummary {
   font-size: 1.7rem;
   font-weight: bold;
   text-align: center;
   padding-top: 1rem;
 }
 
-.overViewContent .boldP {
+.boldP {
   background-color: rgb(43, 42, 42);
   font-weight: bold;
   border-radius: 0.4rem;
   padding: 0.1rem; /* 강조 텍스트의 여백 조정 (선택 사항) */
 }
+
 
 .eduButton {
   background-color: rgb(71, 71, 71);
@@ -365,15 +445,15 @@ section h2 {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
-  padding-right : 10px;
-  padding-top : 10px;
+  padding-right: 10px;
+  padding-top: 10px;
   color: white;
   line-height: 3rem;
 }
 
 .education-table tr th {
   background-color: rgb(255, 255, 255, 0);
-  font-size : 1.2rem;
+  font-size: 1.2rem;
   border: none;
 
   font-weight: bold;
@@ -388,7 +468,6 @@ section h2 {
   height: 2rem;
   border-collapse: collapse;
 }
-
 
 /* 모달 배경 스타일 */
 .modal,
@@ -430,7 +509,7 @@ section h2 {
   max-height: 80vh; /* 최대 높이 설정 */
   border-radius: 1rem;
   text-align: left;
-  font-size : 1.2rem;
+  font-size: 1.2rem;
   overflow: auto; /* 내용이 넘칠 경우 스크롤 가능 */
   -ms-overflow-style: none;
   line-height: 2rem;
@@ -454,9 +533,9 @@ section h2 {
 /* 모달 닫기 버튼 스타일 */
 .modal-close-button {
   position: fixed; /* 화면에 고정 */
-  top : 12vh;
-  right : 7vw;
-  background: rgba(45,45,45); /* 버튼 배경색 */
+  top: 12vh;
+  right: 7vw;
+  background: rgba(45, 45, 45); /* 버튼 배경색 */
   color: #aaa;
   border: none;
   font-size: 40px;
@@ -487,85 +566,6 @@ section h2 {
   cursor: pointer;
 }
 
-#skills {
-  display: flex;
-  flex-wrap: wrap; /* 작은 화면에서도 레이아웃이 깨지지 않도록 설정 */
-  align-items: flex-start; /* 상단 정렬 */
-}
-#skills h2{
-  width : 100%;
-  text-align: center;
-}
-.divSkills hr {
-  border: 1px solid white;
-  width: 7vw;
-}
-
-.divSkills {
-  width: 90vw;
-  display: flex;
-  flex-wrap: wrap; /* 작은 화면에서도 레이아웃이 깨지지 않도록 설정 */
-  justify-content: space-around; /* 항목을 가로로 분산 배치 */
-  align-items: flex-start; /* 상단 정렬 */
-}
-
-.divSkills div {
-  width: 12%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 아이템들을 가운데 정렬 */
-  background-color: rgb(55, 55, 55);
-  border-radius: 3rem;
-  padding: 10px; /* 패딩 추가로 간격 조정 */
-  box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
-  position: relative; /* 자식 요소의 위치를 조정하기 위한 설정 */
-  transition: background-color 0.3s, width 0.3s; /* 부드러운 전환 효과 */
-}
-
-/* Hover 상태에서 상위 div만 스타일 적용 */
-.divSkills div:hover {
-  background-color: rgb(66, 66, 66);
-  width: 15%;
-}
-
-/* 내부 요소들에 대한 기본 스타일 유지 */
-.divSkills div .content,
-.divSkills div .bottom {
-  transition: none; /* 전환 효과를 제거합니다 */
-}
-
-/* 내부 요소들의 배경색과 스타일을 유지 */
-.divSkills div .content {
-  flex: 1; /* 빈 공간을 채우기 위해 확장 */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 상단 정렬 */
-  align-items: center; /* 중앙 정렬 */
-}
-
-.divSkills div .bottom {
-  position: absolute; /* 하단에 고정하기 위한 설정 */
-  bottom: 30px; /* 하단 여백 설정 */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center; /* 중앙 정렬 */
-}
-
-.divSkills p {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center; /* 텍스트 중앙 정렬 */
-}
-
-.divSkills div img {
-  width: 5vw;
-  height: 10vh;
-  object-fit: scale-down;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -592,7 +592,7 @@ section h2 {
   padding: 20px;
   background-color: rgb(35, 35, 35); /* 배경색 설정 */
 }
-#project h2{
+#project h2 {
   text-align: center;
 }
 
