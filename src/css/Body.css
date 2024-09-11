@@ -12,7 +12,7 @@ html {
 .body {
   padding: 0; /* 전체 패딩 제거 */
   margin: 0; /* 전체 마진 제거 */
-  padding-bottom: 30px;
+  padding-bottom: 1rem;
   height: 100%; /* 전체 높이 설정 */
 }
 
@@ -23,7 +23,7 @@ section {
   align-items: center; /* 수평 중앙 정렬 */
   min-height: 100vh; /* 화면 전체 높이 */
   text-align: center; /* 텍스트 중앙 정렬 */
-  padding: 20px; /* 상하 패딩 */
+  padding: 1%; /* 상하 패딩 */
   background-color: rgb(35, 35, 35);
   color: white;
 }
@@ -57,19 +57,19 @@ section {
 
 .hr {
   width: 60%;
-  margin: 20px auto;
-  border: 2px solid orange;
+  margin: 2rem auto;
+  border: 0.05vw solid orange;
 }
 
 .intro1 {
   font-size: 1.4rem;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 1rem 0;
   position: relative;
   z-index: 2;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid;
+  border-right: 1% solid;
   width: 49ch; /* 텍스트 길이에 맞춘 width 설정 */
   animation: typing 4s steps(50, end) 1s normal both,
     blink-caret 0.75s step-end infinite 6s;
@@ -95,7 +95,7 @@ section {
 }
 
 .buttonDeo {
-  margin: 20px 0; /* 상하 마진 */
+  margin: 2% 0; /* 상하 마진 */
   position: relative;
   z-index: 2; /* 버튼이 오버레이 위에 보이도록 설정 */
 }
@@ -118,7 +118,7 @@ section {
 #about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px; /* 항목 사이의 간격 */
+  gap: 2rem; /* 항목 사이의 간격 */
 }
 
 .profile-picture{
@@ -129,9 +129,8 @@ section {
   display: flex;
   flex-direction: column; /* 세로 방향으로 배치 */
   align-items: center; /* 수평 중앙 정렬 */
-  gap: 10px; /* 항목 사이의 간격 */
-  padding: 10px;
-  border-radius: 8px;
+  gap: 0.7rem; /* 항목 사이의 간격 */
+  padding: 0.7rem;
 }
 
 .label {
@@ -151,20 +150,19 @@ section h2 {
 /* 상단으로 이동 버튼 스타일 */
 .scroll-to-top {
   position: fixed;
-  bottom: 100px; /* 화면 하단에서 100px 위치 */
-  right: 20px; /* 화면 우측에서 20px 위치 */
+  bottom: 5vh;
+  right: 1.2vw; 
   background-color: orange; /* 버튼 배경 색상 */
   color: white; /* 버튼 텍스트 색상 */
   border: none;
   border-radius: 50%; /* 원형 버튼 */
-  width: 50px; /* 버튼 너비 */
-  height: 50px; /* 버튼 높이 */
+  width: 3.125rem; /* 버튼 너비 */
+  height: 3.125rem; /* 버튼 높이 */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem; /* 버튼 텍스트 크기 */
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
   z-index: 1000; /* 다른 요소들 위에 표시 */
 }
 
@@ -174,20 +172,19 @@ section h2 {
 
 .send-to-email {
   position: fixed;
-  bottom: 160px; /* 화면 하단에서 160px 위치 (scroll-to-top 버튼과 겹치지 않도록 조정) */
-  right: 20px; /* 화면 우측에서 20px 위치 */
+  bottom: 17vh;
+  right: 1.2vw; 
   background-color: orange; /* 버튼 배경 색상 (파란색) */
   color: white; /* 버튼 텍스트 색상 */
   border: none;
   border-radius: 50%; /* 원형 버튼 */
-  width: 50px; /* 버튼 너비 */
-  height: 50px; /* 버튼 높이 */
+  width: 3.125rem; /* 버튼 너비 */
+  height: 3.125rem; /* 버튼 높이 */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem; /* 버튼 텍스트 크기 */
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼 그림자 추가 */
   z-index: 1000; /* 다른 요소들 위에 표시 */
 }
 
@@ -204,7 +201,7 @@ section h2 {
   align-items: center;
   background: black; /* 기본 배경색을 검정색으로 설정 */
   color: white;
-  padding: 15px 50px;
+  padding: 0.938rem 3.125rem;
   transition: background 0.3s; /* 배경색 전환 애니메이션 */
   z-index: 9999;
 }
@@ -230,7 +227,7 @@ section h2 {
 }
 
 .header nav ul li {
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 .header nav ul li:first-child {
@@ -244,7 +241,7 @@ section h2 {
   overflow: hidden; /* 애니메이션이 요소를 넘치지 않게 함 */
   display: inline-block; /* 링크의 크기를 조정할 수 있게 설정 */
   background: transparent; /* 기본 상태에서 배경색을 투명으로 설정 */
-  padding: 10px; /* 패딩을 추가하여 링크를 클릭할 수 있는 영역을 넓힘 */
+  padding: 0.625rem; /* 패딩을 추가하여 링크를 클릭할 수 있는 영역을 넓힘 */
   z-index: 1; /* 가상 요소 위에 텍스트를 위치시키기 위한 z-index 설정 */
   border-bottom: 1px solid white;
 }
@@ -277,14 +274,14 @@ section h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* 세로 정렬 */
-  gap: 40px;
-  padding: 20px;
+  gap: 2.5rem;
+  padding: 1.25rem;
 }
 
 /* About me 섹션 스타일 */
 #about {
   flex-basis: 45%; /* About me 섹션을 45% 너비로 설정 */
-  min-width: 300px; /* 최소 너비 */
+  min-width: 18.75rem; /* 최소 너비 */
   text-align: center; /* 텍스트 중앙 정렬 */
 }
 
@@ -308,7 +305,7 @@ section h2 {
 /* Skills 섹션 스타일 */
 #skills {
   flex-basis: 45%; /* Skills 섹션을 45% 너비로 설정 */
-  min-width: 300px;
+  min-width: 18.75rem;
 }
 
 #skills h2 {
@@ -328,10 +325,10 @@ section h2 {
   align-items: center;
   background-color: rgb(55, 55, 55);
   border-radius: 3rem;
-  padding: 10px;
+  padding: 0.625rem;
   box-sizing: border-box;
   transition: background-color 0.3s, width 0.3s;
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .divSkills div:hover {
@@ -349,12 +346,12 @@ section h2 {
   width: 5vw;
   height: 10vh;
   object-fit: scale-down;
-  margin-top: 5px;
-  margin-bottom: 20px;
+  margin-top: 0.313rem;
+  margin-bottom: 1.25rem;
 }
 
 /* 반응형 레이아웃 */
-@media (max-width: 768px) {
+@media (max-width: 48remx) {
   .about-skills-container {
     flex-direction: column; /* 작은 화면에서는 세로 배치 */
     align-items: center;
@@ -397,9 +394,9 @@ section h2 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 50px;
+  padding-left: 3.125rem;
   padding-top: 5vh;
-  padding-right: 50px;
+  padding-right: 3.125rem;
   padding-bottom: 5vh;
   text-align: left;
   border-radius: 2rem;
@@ -414,8 +411,8 @@ section h2 {
 }
 
 .overViewContent.show {
-  max-height: 1000px; /* 충분히 큰 값으로 설정 */
-  padding: 5vh 50px;
+  max-height: 62.5rem; /* 충분히 큰 값으로 설정 */
+  padding: 5vh 3.125rem;
   opacity: 1;
 }
 
@@ -438,15 +435,15 @@ section h2 {
   background-color: rgb(71, 71, 71);
   color: white;
   border: none;
-  padding-top: -30px;
+  padding-top: -1.875rem;
 }
 
 .education-table {
   align-items: center;
   justify-content: center;
-  margin-left: 15px;
-  padding-right: 10px;
-  padding-top: 10px;
+  margin-left: 0.938rem;
+  padding-right: 0.625rem;
+  padding-top: 0.625rem;
   color: white;
   line-height: 3rem;
 }
@@ -460,8 +457,8 @@ section h2 {
   height: 2rem;
 }
 .education-table tr td {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.938rem;
+  padding-right: 0.938rem;
   font-size: 1.1rem;
 
   background-color: rgb(44, 44, 44, 0);
@@ -488,12 +485,12 @@ section h2 {
   background-color: rgb(55, 55, 55);
   color: white;
   margin: 10% auto; /* 화면 중앙에 위치 */
-  padding: 20px;
+  padding: 1.25rem;
   border: 1px solid #888;
   width: 80%;
-  max-width: 700px; /* 최대 너비 설정 */
+  max-width: 44rem; /* 최대 너비 설정 */
   max-height: 80vh; /* 최대 높이 설정 */
-  border-radius: 10px;
+  border-radius: 0.625rem;
   text-align: center;
   overflow: auto; /* 내용이 넘칠 경우 스크롤 가능 */
 }
@@ -503,7 +500,7 @@ section h2 {
   background-color: rgb(44, 44, 44);
   color: white;
   margin: 5% auto; /* 화면 중앙에 위치 */
-  padding: 20px;
+  padding: 1.25rem;
   width: 80%;
   max-width: 90vw; /* 최대 너비 설정 */
   max-height: 80vh; /* 최대 높이 설정 */
@@ -538,10 +535,10 @@ section h2 {
   background: rgba(45, 45, 45); /* 버튼 배경색 */
   color: #aaa;
   border: none;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
-  padding: 10px;
-  border-radius: 50%; /* 원형 버튼 */
+  padding: 0.625rem;
+  border-radius: 1rem; /* 원형 버튼 */
   cursor: pointer;
   z-index: 1001; /* 모달보다 위에 위치 */
 }
@@ -555,7 +552,7 @@ section h2 {
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 
@@ -589,7 +586,7 @@ section h2 {
   display: flex;
   flex-wrap: wrap; /* 작은 화면에서도 레이아웃이 깨지지 않도록 설정 */
   justify-content: center; /* 항목을 중앙에 정렬 */
-  padding: 20px;
+  padding: 1.25rme;
   background-color: rgb(35, 35, 35); /* 배경색 설정 */
 }
 #project h2 {
@@ -608,8 +605,8 @@ section h2 {
   height: 45vh;
   background-color: rgb(55, 55, 55); /* 배경색 설정 */
   border-radius: 0.5rem; /* 테두리 둥글게 설정 */
-  margin: 15px; /* 항목 사이 간격 */
-  padding: 10px; /* 내부 패딩 */
+  margin: 0.938rem; /* 항목 사이 간격 */
+  padding: 0.625rem; /* 내부 패딩 */
   text-align: center; /* 텍스트 중앙 정렬 */
   position: relative; /* Overlay를 위한 위치 설정 */
   overflow: hidden; /* 자식 요소가 넘치지 않도록 설정 */
@@ -617,7 +614,7 @@ section h2 {
 }
 
 .project-item img {
-  width: 350px; /* 이미지가 컨테이너 너비에 맞게 조정 */
+  width: 33.125rem; /* 이미지가 컨테이너 너비에 맞게 조정 */
   height: auto; /* 비율을 유지하며 높이 자동 조정 */
   border-radius: 0.5rem; /* 테두리 둥글게 설정 */
 }
@@ -636,7 +633,7 @@ section h2 {
   align-items: center; /* 콘텐츠를 수평 중앙 정렬 */
   opacity: 0; /* 기본적으로 숨김 상태 */
   transition: opacity 0.3s; /* 부드러운 전환 효과 */
-  padding: 20px;
+  padding: 1.25rem;
   box-sizing: border-box; /* 패딩을 포함한 박스 크기 설정 */
 }
 
@@ -645,13 +642,13 @@ section h2 {
 }
 
 .project-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
-  margin: 10px 0; /* 제목 상하 여백 설정 */
+  margin: 0.625rem 0; /* 제목 상하 여백 설정 */
 }
 
 .project-description {
-  margin: 10px 0; /* 설명 텍스트의 여백 설정 */
+  margin: 0.625rem 0; /* 설명 텍스트의 여백 설정 */
 }
 
 .project-button {
@@ -659,9 +656,9 @@ section h2 {
   color: white; /* 버튼 텍스트 색상 */
   border: none; /* 기본 테두리 제거 */
   border-radius: 0.5rem; /* 버튼 둥글게 설정 */
-  padding: 10px 20px; /* 버튼 내부 여백 */
+  padding: 0.625rem 1.25rem; /* 버튼 내부 여백 */
   cursor: pointer; /* 커서 모양을 포인터로 변경 */
-  font-size: 16px; /* 버튼 텍스트 크기 */
+  font-size: 1rem; /* 버튼 텍스트 크기 */
   transition: background-color 0.3s; /* 배경색 변화 부드럽게 설정 */
 }
 
@@ -676,7 +673,7 @@ section h2 {
   display: flex;
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
-  gap: 5px; /* 요소들 사이의 간격 */
+  gap: 0.3rem; /* 요소들 사이의 간격 */
   flex-direction: row; /* 요소를 가로로 정렬 */
 }
 
@@ -684,7 +681,7 @@ section h2 {
   background-color: rgb(66, 66, 66);
   border: 1px solid white;
   color: white;
-  padding: 5px 10px; /* 여백 추가 */
+  padding: 5px 0.625rem; /* 여백 추가 */
 }
 
 .projectType span {
