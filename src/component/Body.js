@@ -54,6 +54,7 @@ import port2 from "../image/port2.png";
 import port3 from "../image/port3.png";
 import port4 from "../image/port4.png";
 import port5 from "../image/port5.png";
+import PDF from "../image/pdf.png";
 
 const Body = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -541,16 +542,16 @@ const Body = () => {
                             </ul>
                             <h2>회고</h2>
                             처음 프로젝트를 진행하면서 주제 선정과 일정 관리에
-                            어려움을 겪었지만, 차근차근 계획을 세워 하드웨어
+                            어려움을 겪었지만 차근차근 계획을 세워 하드웨어
                             제작과 센서 연결 작업을 진행했습니다. 시간이
-                            지나면서 프로젝트가 점차 구체화되고, 각 단계가
+                            지나면서 프로젝트가 점차 구체화되고 각 단계가
                             성공적으로 구현될 때마다 성취감을 느끼며 개발에 대한
-                            흥미가 점점 커졌습니다. 다만, 모든 시스템은 구현에
+                            흥미가 점점 커졌습니다. 다만 모든 시스템은 구현에
                             성공했지만, 하드웨어 구성 과정에서 기술적인 한계로
                             인해 동전 분류가 완벽하게 이루어지지 않은 점은
                             아쉬움으로 남았습니다. 하지만 이러한 경험을 통해
-                            문제 해결 능력을 더욱 키울 수 있었고, 앞으로
-                            기술적인 도전에 대한 자신감을 얻게 되었습니다.
+                            문제 해결 능력을 더욱 키울 수 있었고 프로젝트를
+                            진행함에 있어 도움이 되었습니다.
                             <hr />
                           </div>
                         </div>
@@ -680,8 +681,16 @@ const Body = () => {
                             <div className="githubA">
                               <span>깃허브를 클릭하면 이동합니다.</span>
                               <h3>
-                                <a href="https://github.com/ssojuwan/together">
-                                  GitHub
+                                <a
+                                  href="https://github.com/ssojuwan/together"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -796,19 +805,31 @@ const Body = () => {
                             있는 기능을 구현하고 싶습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
                                   href={`${process.env.PUBLIC_URL}/expression.pdf`}
                                   download="expression.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
-                              </h3>
-                              <h3>
-                                <a href="https://github.com/ssojuwan/expression">
-                                  GitHub
+                                <a
+                                  href="https://github.com/ssojuwan/expression"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -960,18 +981,31 @@ const Body = () => {
                             되었습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               <h3>
+                                <a
+                                  href="https://github.com/ssojuwan/reactClass"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
+                                </a>
+
                                 <a
                                   href={`${process.env.PUBLIC_URL}/reactPracticePDF.pdf`}
                                   download="reactPracticePDF.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
-                                </a>
-                              </h3>
-                              <h3>
-                                <a href="https://github.com/ssojuwan/reactClass">
-                                  GitHub
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -1089,14 +1123,20 @@ const Body = () => {
                             미치는 영향을 명확히 인식하게 되었습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
                                   href={`${process.env.PUBLIC_URL}/AIModel.pdf`}
                                   download="AIModel.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                               <h3>
@@ -1221,19 +1261,31 @@ const Body = () => {
                             점들을 잘 적용할 수 있을 것 같습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
                                   href={`${process.env.PUBLIC_URL}/MFC.pdf`}
                                   download="MFC.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
-                              </h3>
-                              <h3>
-                                <a href="https://github.com/ssojuwan/MFCCAFE">
-                                  GitHub
+                                <a
+                                  href="https://github.com/ssojuwan/MFCCAFE"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -1368,19 +1420,32 @@ const Body = () => {
                             같습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
+                                  href="https://github.com/jiseo0ok/rasberry-ycbar"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
+                                </a>
+
+                                <a
                                   href={`${process.env.PUBLIC_URL}/YCbar.pdf`}
                                   download="YCbar.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
-                                </a>
-                              </h3>
-                              <h3>
-                                <a href="https://github.com/jiseo0ok/rasberry-ycbar">
-                                  GitHub
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                               <h3>
@@ -1499,14 +1564,20 @@ const Body = () => {
                             효율적인 아키텍처를 설계해보고 싶습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
                                   href={`${process.env.PUBLIC_URL}/AWS.pdf`}
                                   download="AWS.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -1628,19 +1699,31 @@ const Body = () => {
                             지속적으로 기술을 개선하고 싶습니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               {/* 추후 서버 연결 시 코드 수정 필요 */}
                               <h3>
                                 <a
                                   href={`${process.env.PUBLIC_URL}/gunjang.pdf`}
                                   download="gunjang.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                 >
-                                  PDF
+                                  <img
+                                    src={PDF}
+                                    alt="PDF"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
-                              </h3>
-                              <h3>
-                                <a href="https://github.com/RPG-Inspection/front/tree/main">
-                                  GitHub
+                                <a
+                                  href="https://github.com/RPG-Inspection/front/tree/main"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
@@ -1743,10 +1826,18 @@ const Body = () => {
                             나갈 예정입니다.
                             <hr />
                             <div className="githubA">
-                              <span>텍스트를 클릭하면 이동합니다.</span>
+                              <span>아이콘을 클릭하면 이동합니다.</span>
                               <h3>
-                                <a href="https://github.com/ssojuwan/frontport">
-                                  GitHub
+                                <a
+                                  href="https://github.com/ssojuwan/frontport"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <img
+                                    src={Github}
+                                    alt="Github"
+                                    style={{ width: "5vw", height: "auto" }}
+                                  />
                                 </a>
                               </h3>
                             </div>
